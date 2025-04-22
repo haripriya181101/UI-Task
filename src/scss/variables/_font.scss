@@ -1,0 +1,61 @@
+/*==================================
+=            Typography            =
+==================================*/
+
+/**
+	Define here all the typographies and sizes of the web fonts. We can use HTML tags directly or conceptual terms like title, lead...
+**/
+
+$font-family-basic: (
+  dm-sans: (
+    "dm-sans",
+    sans-serif,
+  ),
+  bricolage-grotesque: (
+    "bricolage-grotesque",
+  ),
+);
+
+$font-family: (
+  default: map-get($font-family-basic, dm-sans),
+  primary: map-get($font-family-basic, bricolage-grotesque),
+);
+
+$font-size: (
+  html: 16px,
+  body: rem-calc(18),
+  font-size-6: rem-calc(6),
+  font-size-9: rem-calc(9),
+  font-size-10: rem-calc(10),
+  font-size-12: rem-calc(12),
+  font-size-13: rem-calc(13),
+  font-size-14: rem-calc(14),
+  font-size-16: rem-calc(16),
+  font-size-15: rem-calc(15),
+  font-size-18: rem-calc(18),
+  font-size-22: rem-calc(22),
+  font-size-24: rem-calc(24),
+  font-size-25: rem-calc(25),
+  font-size-32: rem-calc(32),
+  font-size-33: rem-calc(33),
+  font-size-40: rem-calc(40),
+  font-size-48: rem-calc(48),
+  font-size-50: rem-calc(50),
+  font-size-56: rem-calc(56),
+  font-size-63: rem-calc(63),
+  font-size-65: rem-calc(65),
+  font-size-75: rem-calc(75),
+  font-size-96: rem-calc(96),
+  /* base font size. Do not touch if you don't know what you're doing */ size-20:
+    rem-calc(20),
+);
+
+$font-weight: (
+  black: 900,
+  bold: 700,
+  medium: 500,
+  regular: 400,
+  light: 300,
+  semiBold: 600,
+  extra-bold: 800,
+);
