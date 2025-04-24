@@ -1,3 +1,5 @@
+@use "sass:map";
+
 /*=====================================
 =            Pantone		          =
 =====================================*/
@@ -36,24 +38,19 @@ $pantone: (
 	This colors can be included in scss files althought we can create intermediate colors referencing this ones if we need so.
 */
 $colors: (
-  primary: map-get($pantone, Olive-Green),
-  secondary: map-get($pantone, Dark-Green-Cyan),
-  tertiary: map-get($pantone, Light-Beige),
-  Quaternary: map-get($pantone, Camel-Brown),
-  Quinary: map-get($pantone, Deep-Coffee-Brown),
-  Senary: map-get($pantone, Black),
+  primary: map.get($pantone, Light-Beige),
+  secondary: map.get($pantone, Dark-Gray),
 );
 
 $background: (
-  primary: map-get($pantone, Light-Beige),
-  secondary: map-get($pantone, Dark-Green-Cyan),
-  tertiary: map-get($pantone, White),
-  Quaternary: map-get($pantone, Olive-Green),
-  Quinary: map-get($pantone, Pale-Lime),
+  primary: map.get($pantone, Light-Beige),
+  secondary: map.get($pantone, Dark-Green-Cyan),
+  tertiary: map.get($pantone, White),
+  Quaternary: map.get($pantone, Olive-Green),
 );
 
-$border: (
-  primary: map-get($pantone, Gainsboro),
-  secondary: map-get($pantone, Black),
-  tertiary: map-get($pantone, Dark-Green-Cyan),
-);
+// $border: (
+//   primary: map-get($pantone, Gainsboro),
+//   secondary: map-get($pantone, Black),
+//   tertiary: map-get($pantone, Dark-Green-Cyan),
+// );

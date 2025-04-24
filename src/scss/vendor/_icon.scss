@@ -1,3 +1,22 @@
+@use "sass:string";
+
+$icon-Usuario: string.unquote('"\\e900"');
+$icon-Union: string.unquote('"\\e901"');
+$icon-truck: string.unquote('"\\e902"');
+$icon-message: string.unquote('"\\e903"');
+$icon-logo: string.unquote('"\\e904"');
+$icon-instagram: string.unquote('"\\e905"');
+$icon-Group-150: string.unquote('"\\e906"');
+$icon-Group: string.unquote('"\\e907"');
+$icon-left: string.unquote('"\\e908"');
+$icon-right: string.unquote('"\\e909"');
+$icon-Frame-158: string.unquote('"\\e90a"');
+$icon-heart: string.unquote('"\\e90b"');
+$icon-right-arrow: string.unquote('"\\e90c"');
+$icon-Component-16: string.unquote('"\\e90d"');
+$icon-like: string.unquote('"\\e90e"');
+$icon-store: string.unquote('"\\e90f"');
+
 @font-face {
   font-family: "icomoon";
   src: url("fonts/icomoon.eot?fee3k2");
@@ -35,9 +54,10 @@
   color: #fff;
 }
 .icon-truck:before {
-  content: "\e902";
+  content: $icon-truck;
   color: #fff;
 }
+
 .icon-message:before {
   content: "\e903";
   color: #fff;
