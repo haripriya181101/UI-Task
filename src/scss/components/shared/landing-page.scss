@@ -1,4 +1,5 @@
-@use "../../utilities" as utilities;
+@use "../../variables/utilities" as utilities;
 .header {
-  color: utilities.pantone(Dark-Green-Cyan);
+  color: utilities.pantone("Dark-Green-Cyan");
+  background-color: utilities.background("Quaternary");
 }

@@ -39,7 +39,7 @@ $pantone: (
 */
 $colors: (
   primary: map.get($pantone, Light-Beige),
-  secondary: map.get($pantone, Dark-Gray),
+  secondary: map.get($pantone, Dark-Grey),
 );
 
 $background: (
@@ -49,8 +49,8 @@ $background: (
   Quaternary: map.get($pantone, Olive-Green),
 );
 
-// $border: (
-//   primary: map-get($pantone, Gainsboro),
-//   secondary: map-get($pantone, Black),
-//   tertiary: map-get($pantone, Dark-Green-Cyan),
-// );
+$border: (
+  primary: map-get($pantone, Gainsboro),
+  secondary: map-get($pantone, Black),
+  tertiary: map-get($pantone, Dark-Green-Cyan),
+);

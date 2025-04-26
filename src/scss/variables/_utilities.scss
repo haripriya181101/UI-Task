@@ -1,4 +1,6 @@
 @use "sass:math";
+@use "./colors" as *;
+
 
 @function pantone($name) {
   @return map-get($pantone, $name);
@@ -9,8 +11,9 @@
 }
 
 @function background($key) {
-  @return map.get($background, $key);
+  @return map-get($background, $key);
 }
+
 @function border($name) {
   @return map-get($border, $name);
 }
