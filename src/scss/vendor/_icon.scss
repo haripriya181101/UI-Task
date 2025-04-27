@@ -1,5 +1,6 @@
 @use "sass:string";
 
+// Define icon unicode using string.unquote for each icon
 $icon-Usuario: string.unquote('"\\e900"');
 $icon-Union: string.unquote('"\\e901"');
 $icon-truck: string.unquote('"\\e902"');
@@ -19,19 +20,19 @@ $icon-store: string.unquote('"\\e90f"');
 
 @font-face {
   font-family: "icomoon";
-  src: url("fonts/icomoon.eot?fee3k2");
-  src: url("fonts/icomoon.eot?fee3k2#iefix") format("embedded-opentype"),
-    url("fonts/icomoon.ttf?fee3k2") format("truetype"),
-    url("fonts/icomoon.woff?fee3k2") format("woff"),
-    url("fonts/icomoon.svg?fee3k2#icomoon") format("svg");
+  src: url("src/fonts/icomoon/icomoon.eot");
+  src: url("src/fonts/icomoon/icomoon.eot") format("embedded-opentype"),
+       url("src/fonts/icomoon/icomoon.ttf") format("truetype"),
+       url("src/fonts/icomoon/icomoon.woff") format("woff"),
+       url("src/fonts/icomoon/icomoon.svg") format("svg");
   font-weight: normal;
   font-style: normal;
-  font-display: block;
+  font-display: swap;
 }
+
 
 [class^="icon-"],
 [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "icomoon" !important;
   speak: never;
   font-style: normal;
@@ -39,44 +40,34 @@ $icon-store: string.unquote('"\\e90f"');
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-
-  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .icon-Usuario:before {
-  content: "\e900";
-  color: #fff;
+  content: "\e900";  
 }
 .icon-Union:before {
   content: "\e901";
-  color: #fff;
 }
 .icon-truck:before {
-  content: $icon-truck;
-  color: #fff;
+  content: "\e902";
 }
-
 .icon-message:before {
   content: "\e903";
-  color: #fff;
 }
 .icon-logo:before {
   content: "\e904";
-  color: #fff;
+
 }
 .icon-instagram:before {
   content: "\e905";
-  color: #fff;
 }
 .icon-Group-150:before {
   content: "\e906";
-  color: #fff;
 }
 .icon-Group:before {
   content: "\e907";
-  color: #fff;
 }
 .icon-left:before {
   content: "\e908";
@@ -89,11 +80,11 @@ $icon-store: string.unquote('"\\e90f"');
 }
 .icon-heart:before {
   content: "\e90b";
-  color: #fff;
+
 }
 .icon-right-arrow:before {
   content: "\e90c";
-  color: #fff;
+
 }
 .icon-Component-16:before {
   content: "\e90d";
@@ -103,5 +94,5 @@ $icon-store: string.unquote('"\\e90f"');
 }
 .icon-store:before {
   content: "\e90f";
-  color: #fff;
+
 }
