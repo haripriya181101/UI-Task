@@ -4,6 +4,7 @@
 .header {
   background-color: utilities.background("primary");
   padding: 0px 114px;
+  
   &__topbar {
     display: flex;
     justify-content: space-between;
@@ -169,8 +170,8 @@
     }
 
     .header__hamburger {
-      width: 28px;
-      height: 28px;
+      width: 24px;
+      height: 24px;
       cursor: pointer;
     }
 
@@ -211,6 +212,11 @@
         font-size: 18px;
       }
     }
+  }
+  &__close-btn{
+    display: none;
+    width: 24px;
+    height: 24px;
   }
   @include media-breakpoint-down(xl) {
     &__topbar_menu {
