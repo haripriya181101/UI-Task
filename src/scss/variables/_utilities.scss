@@ -1,13 +1,96 @@
+@use "sass:map";
 @use "sass:math";
 @use "./colors" as *;
+@use "./font" as *;
 
+// ----
+// REM conversion functions
+// ----
 
-@function pantone($name) {
-  @return map-get($pantone, $name);
+$rem-base: 16px !default;
+
+@function strip-unit($num) {
+  @return math.div($num, $num * 0 + 1);
+}
+
+@function convert-to-rem($value, $base-value: $rem-base) {
+  @if unit($value) == "" {
+    $value: $value * 1px; // Default to px if no unit
+  }
+
+  // Convert value from px to rem
+  $value: math.div(strip-unit($value), strip-unit($base-value)) * 1rem;
+
+  // If value is 0, return 0
+  @if $value == 0rem {
+    $value: 0;
+  }
+
+  @return $value;
+}
+
+@function rem-calc($values, $base-value: $rem-base) {
+  $max: length($values);
+  // If there's only one value, just convert that
+  @if $max == 1 {
+    @return convert-to-rem(nth($values, 1), $base-value);
+  }
+
+  // If there are multiple values, convert each to rem
+  $remValues: ();
+  @for $i from 1 through $max {
+    $remValues: append(
+      $remValues,
+      convert-to-rem(nth($values, $i), $base-value)
+    );
+  }
+
+  @return $remValues;
+}
+
+// Font Size Map
+$font-size: (
+  html: 16px,
+  body: rem-calc(18),
+  font-size-6: rem-calc(6),
+  font-size-9: rem-calc(9),
+  font-size-10: rem-calc(10),
+  font-size-12: rem-calc(12),
+  // Correctly using rem-calc for font sizes
+  font-size-13: rem-calc(13),
+  font-size-14: rem-calc(14),
+  font-size-16: rem-calc(16),
+  font-size-18: rem-calc(18),
+  font-size-22: rem-calc(22),
+  font-size-24: rem-calc(24),
+  font-size-25: rem-calc(25),
+  font-size-32: rem-calc(32),
+  font-size-40: rem-calc(40),
+  font-size-48: rem-calc(48),
+  font-size-50: rem-calc(50),
+  font-size-56: rem-calc(56),
+  font-size-63: rem-calc(63),
+  font-size-65: rem-calc(65),
+  font-size-75: rem-calc(75),
+  font-size-96: rem-calc(96),
+  size-20: rem-calc(20),
+  // base font size (should not be changed unless necessary)
+);
+
+@function font-family($name) {
+  @return map-get($font-family, $name);
+}
+
+@function font-size($key) {
+  @return map-get($font-size, $key);
+}
+
+@function font-weight($name) {
+  @return map-get($font-weight, $name);
 }
 
 @function color($name) {
-  @return map.get($colors, $name);
+  @return map-get($color, $name);
 }
 
 @function background($key) {
@@ -18,114 +101,20 @@
   @return map-get($border, $name);
 }
 
-@function font-family($name) {
-  @return map-get($font-family, $name);
-}
-
-@function font-size($name) {
-  @return map-get($font-size, $name);
-}
-
-@function font-weight($name) {
-  @return map-get($font-weight, $name);
-}
-
 // ----
-// rem mixins
+// Mixin for REM conversion
 // ----
-$rem-base: 16px !default;
-// list-separator polyfill by Hugo Giraudel (https://sass-compatibility.github.io/#list_separator_function)
-@function rem-separator($list) {
-  @if function-exists("list-separator") ==true {
-    @return list-separator($list);
-  }
-  $test-list: ();
-  @each $item in $list {
-    $test-list: append($test-list, $item, space);
-  }
-  @return if($test-list==$list, space, comma);
-}
-
-@mixin rem-base($zoom: 100%) {
-  font-size: $zoom / 16px * $rem-base;
-}
-
-@function rem-convert($to, $values...) {
-  $result: ();
-  $separator: rem-separator($values);
-  @each $value in $values {
-    @if type-of($value) == "number" and unit($value) == "rem" and $to== "px" {
-      $result: append($result, $value / 1rem * $rem-base, $separator);
-    } @else if
-      type-of($value) ==
-      "number" and
-      unit($value) ==
-      "px" and
-      $to==
-      "rem"
-    {
-      $result: append($result, $value / ($rem-base / 1rem), $separator);
-    } @else if type-of($value) == "list" {
-      $result: append($result, rem-convert($to, $value...), $separator);
-    } @else {
-      $result: append($result, $value, $separator);
-    }
-  }
-  @return if(length($result) ==1, nth($result, 1), $result);
-}
-
-@function rem($values...) {
-  @return rem-convert(rem, $values...);
-}
 
 @mixin rem($properties, $values...) {
+  // If $properties is a map, loop through and convert each property
   @if type-of($properties) == "map" {
     @each $property in map-keys($properties) {
       @include rem($property, map-get($properties, $property));
     }
   } @else {
+    // If $properties is a list, convert each property to rem
     @each $property in $properties {
-      #{$property}: rem-convert(rem, $values...);
+      #{$property}: rem-calc($values...);
     }
   }
-}
-
-// $base-font-size: 100% !default;
-// //$base-line-height is 24px while $base-font-size is 16px
-// $base-line-height: 150%;
-// It strips the unit of measure and returns it
-@function strip-unit($num) {
-  @return math.div($num, $num * 0 + 1);
-}
-
-// New Syntax, allows to optionally calculate on a different base value to counter compounding effect of em\'s.
-// Call with 1, 2, 3 or 4 parameters, \'px\' is not required but supported
-// rem-calc(10 20 30px 40);
-// Space delimited, if you want to delimit using comma\'s, wrap it in another pair of brackets
-// rem-calc((10, 20, 30, 40px));
-// Optionally call with a different base (eg: 8px) to calculate em.
-// rem-calc(16px 32px 48px, 8px);
-// If you require to comma separate your list
-// rem-calc((16px, 32px, 48), 8px);
-@function convert-to-rem($value, $base-value: $rem-base) {
-  $value: math.div(strip-unit($value), strip-unit($base-value)) * 1rem;
-  @if ($value==0rem) {
-    $value: 0;
-  } // Turn 0em into 0
-  @return $value;
-}
-
-@function rem-calc($values, $base-value: $rem-base) {
-  $max: length($values);
-  @if $max==1 {
-    @return convert-to-rem(nth($values, 1), $base-value);
-  }
-  $remValues: ();
-  @for $i from 1 through $max {
-    $remValues: append(
-      $remValues,
-      convert-to-rem(nth($values, $i), $base-value)
-    );
-  }
-  @return $remValues;
 }
