@@ -1,11 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Header</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
+    <header class="header">
+        <div class="header__topbar header__topbar_info">
+            <div class="header__store-info">
+                <a href="#"><span class="icon-truck"></span>
+                    <span>Envío gratuito a tienda</span></a>
+            </div>
+            <div class="header__store-info">
+                <a href="#"><span class="icon-truck"></span>
+                    <span>Envío gratuito a domicilio a partir de 50€</span></a>
+            </div>
+            <div class="header__store-info">
+                <a href="#"><span class="icon-top-down"></span>
+                    <span>Devoluciones hasta 60 días</span></a>
+            </div>
+        </div>
+
+        <div class="header__mobile">
+            <div class="header__mobile-top">
+                <img src="./src/images/hamburger.png" alt="Menu" class="header__hamburger" id="hamburgerBtn" />
+
+                <figure class="header__logo">
+                    <img class="header__logo-image" src="./src/images/logo.svg" alt="Logo" />
+                </figure>
+
+                <div class="header__icons">
+                    <a href="#"><span class="icon-Usuario"></span></a>
+                    <a href="#"><span class="icon-heart"></span></a>
+                    <a href="#"><span class="icon-store"></span></a>
+                </div>
+            </div>
+
+            <div class="header__search-bar">
+                <input type="text" class="header__search" placeholder="Buscar" />
+                <span class="icon-search header__search-icon"></span>
+            </div>
+        </div>
+
+        <div class="header__navigation" id="mobileMenu">
+            <div class="header__topbar header__topbar_nav">
+                <ul class="header__gender-list">
+                    <li><a href="#">HOMBRE</a></li>
+                    <li><a href="#">MUJER</a></li>
+                    <li><a href="#">NIÑO/A</a></li>
+                </ul>
+                <figure class="header__logo">
+                    <img class="header__logo-image" src="./src/images/logo.svg" alt="Logo" />
+                </figure>
+                <div class="header__icons">
+                    <a href="#"><span class="icon-location2"></span></a>
+                    <a href="#"><span class="icon-Usuario"></span></a>
+                    <a href="#"><span class="icon-heart"></span></a>
+                    <a href="#"><span class="icon-store"></span></a>
+                </div>
+            </div>
+
+            <div class="header__topbar header__topbar_menu">
+                <ul class="header__menu-list">
+                    <li><a href="#">OFERTAS</a></li>
+                    <li><a href="#">DESTACADOS</a></li>
+                    <li><a href="#">CALZADO</a></li>
+                    <li><a href="#">ACCESORIOS</a></li>
+                    <li><a href="#">DEPORTES</a></li>
+                    <li><a href="#">MARCAS</a></li>
+                </ul>
+                <div class="header__search-bar">
+                    <input type="text" class="header__search" placeholder="Buscar" />
+                    <span class="icon-search header__search-icon"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
     <script type="module" src="./src/js/main.js"></script>
 </body>
+
 </html>

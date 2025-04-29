@@ -1,0 +1,36 @@
+// DIN-pro Font family
+// DIN-pro - font-weight : 400
+@font-face {
+  font-family: "din-pro";
+  src: url("/src/fonts/din-pro/dinpro.otf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+// DIN-pro - font-weight : 900
+@font-face {
+  font-family: "din-pro";
+  src: url("/src/fonts/din-pro/dinpro_black.otf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+// DIN-pro - font-weight : 700
+@font-face {
+  font-family: "din-pro";
+  src: url("/src/fonts/din-pro/dinpro_bold.otf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+//Titillium-web Font family
+//Titillium-web - font-weight: 400
+@font-face {
+  font-family: "titillium-web";
+  src: url("/src/fonts/titillium-web/TitilliumWeb-Regular.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}

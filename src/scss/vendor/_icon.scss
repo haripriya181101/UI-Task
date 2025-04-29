@@ -1,36 +1,35 @@
 @use "sass:string";
 
 // Define icon unicode using string.unquote for each icon
-$icon-Usuario: string.unquote('"\\e900"');
-$icon-Union: string.unquote('"\\e901"');
+$icon-right-arrow: string.unquote('"\\e900"');
+$icon-Usuario: string.unquote('"\\e901"');
 $icon-truck: string.unquote('"\\e902"');
-$icon-message: string.unquote('"\\e903"');
-$icon-logo: string.unquote('"\\e904"');
-$icon-instagram: string.unquote('"\\e905"');
-$icon-Group-150: string.unquote('"\\e906"');
-$icon-Group: string.unquote('"\\e907"');
-$icon-left: string.unquote('"\\e908"');
-$icon-right: string.unquote('"\\e909"');
-$icon-Frame-158: string.unquote('"\\e90a"');
+$icon-top-down: string.unquote('"\\e903"');
+$icon-Store: string.unquote('"\\e904"');
+$icon-store: string.unquote('"\\e905"');
+$icon-mail: string.unquote('"\\e906"');
+$icon-logo: string.unquote('"\\e907"');
+$icon-location: string.unquote('"\\e908"');
+$icon-like: string.unquote('"\\e909"');
+$icon-less-than: string.unquote('"\\e90a"');
 $icon-heart: string.unquote('"\\e90b"');
-$icon-right-arrow: string.unquote('"\\e90c"');
-$icon-Component-16: string.unquote('"\\e90d"');
-$icon-like: string.unquote('"\\e90e"');
-$icon-store: string.unquote('"\\e90f"');
+$icon-greater-than: string.unquote('"\\e90c"');
+$icon-facebook: string.unquote('"\\e90d"');
+$icon-dropdown: string.unquote('"\\e90e"');
+$icon-location2: string.unquote('"\\e948"');
+$icon-search: string.unquote('"\\e986"');
 
 @font-face {
   font-family: "icomoon";
   src: url("src/fonts/icomoon/icomoon.eot");
-  src: url("src/fonts/icomoon/icomoon.eot") format("embedded-opentype"),
-       url("src/fonts/icomoon/icomoon.ttf") format("truetype"),
-       url("src/fonts/icomoon/icomoon.woff") format("woff"),
-       url("src/fonts/icomoon/icomoon.svg") format("svg");
+  src: url("src/fonts/icomoon/icomoon.eot?") format("embedded-opentype"),
+    url("src/fonts/icomoon/icomoon.ttf?") format("truetype"),
+    url("src/fonts/icomoon/icomoon.woff") format("woff"),
+    url("src/fonts/icomoon/icomoon.svg") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
-
-
 [class^="icon-"],
 [class*=" icon-"] {
   font-family: "icomoon" !important;
@@ -44,55 +43,69 @@ $icon-store: string.unquote('"\\e90f"');
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-Usuario:before {
-  content: "\e900";  
+.icon-right-arrow:before {
+  content: "\e900";
 }
-.icon-Union:before {
+.icon-Usuario:before {
   content: "\e901";
+  color: #fff;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
 }
 .icon-truck:before {
   content: "\e902";
 }
-.icon-message:before {
+.icon-top-down:before {
   content: "\e903";
 }
-.icon-logo:before {
+.icon-Store:before {
   content: "\e904";
-
 }
-.icon-instagram:before {
+.icon-store:before {
   content: "\e905";
+  color: #fff;
 }
-.icon-Group-150:before {
+.icon-mail:before {
   content: "\e906";
 }
-.icon-Group:before {
+.icon-logo:before {
   content: "\e907";
 }
-.icon-left:before {
+.icon-location:before {
   content: "\e908";
 }
-.icon-right:before {
+.icon-like:before {
   content: "\e909";
 }
-.icon-Frame-158:before {
+.icon-less-than:before {
   content: "\e90a";
 }
 .icon-heart:before {
   content: "\e90b";
-
+  color: #fff;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
 }
-.icon-right-arrow:before {
+.icon-greater-than:before {
   content: "\e90c";
-
 }
-.icon-Component-16:before {
+.icon-facebook:before {
   content: "\e90d";
 }
-.icon-like:before {
+.icon-dropdown:before {
   content: "\e90e";
 }
-.icon-store:before {
-  content: "\e90f";
+.icon-location2:before {
+  content: "\e948";
+  color: #fff;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+}
 
+.icon-search:before {
+  content: "\e986";
+  color: #fff;
 }
