@@ -1,13 +1,15 @@
 @use "../../variables/utilities" as utilities;
 @use "bootstrap/scss/bootstrap" as *;
-
-.header {
+body {
   background-color: utilities.background("primary");
+}
+.header {
   padding: 0px 114px;
-  
+
   &__topbar {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     position: relative;
     &::after {
       content: "";
@@ -92,6 +94,18 @@
     display: flex;
     gap: 8px;
     font-size: 20px;
+    a {
+      text-decoration: none;
+    }
+  }
+  &__icon {
+    color: utilities.color("primary");
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    font-size: utilities.font-size("font-size-24");
+    display: flex;
+    align-items: center;
   }
   &__menu-list {
     display: flex;
@@ -153,7 +167,7 @@
     transform: translateY(-50%);
     font-family: "icomoon";
     font-size: utilities.font-size("font-size-18");
-    color: #888;
+    color: utilities.color("primary");
     pointer-events: none;
   }
   &__mobile {
@@ -170,8 +184,6 @@
     }
 
     .header__hamburger {
-      width: 24px;
-      height: 24px;
       cursor: pointer;
     }
 
@@ -189,9 +201,8 @@
     .header__icons {
       display: flex;
       gap: 10px;
-
       a span {
-        font-size: 20px;
+        font-size: utilities.font-size("font-size-22");
       }
     }
 
@@ -213,10 +224,18 @@
       }
     }
   }
-  &__close-btn{
+  &__menu-icon {
+    margin: 0;
     display: none;
-    width: 24px;
-    height: 24px;
+  }
+  &__close-btn {
+    display: none;
+  }
+  &__location-container {
+    display: none;
+  }
+  &__location-divider {
+    display: none;
   }
   @include media-breakpoint-down(xl) {
     &__topbar_menu {
@@ -224,14 +243,77 @@
       flex-direction: column;
       gap: 16px;
     }
+    &__topbar {
+      align-items: baseline;
+    }
   }
   @include media-breakpoint-down(lg) {
-    padding: 0 16px;
+    padding: 16px 14px 16px 22px;
+    &.menu-open {
+      background-color: utilities.background("secondary");
 
+      .header__topbar {
+        display: none;
+        align-items: normal;
+      }
+
+      .header__logo-image {
+        content: url("./src/images/responsive-logo.svg");
+      }
+
+      .header__icon {
+        color: utilities.color("Quaternary");
+        font-size: 28px;
+      }
+      .header__search {
+        background-color: utilities.pantone("Light-Gray");
+        &::placeholder {
+          color: utilities.color("Quaternary");
+        }
+      }
+      .header__search-icon {
+        color: utilities.color("Quaternary");
+      }
+      .header__gender-list {
+        padding-bottom: 27px;
+        a {
+          color: utilities.color("Quaternary");
+          font-weight: utilities.font-weight(regular);
+          padding: 6px 0px;
+        }
+      }
+      .header__menu-list {
+        li {
+          padding: 10px 0px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          span {
+            font-size: 42px;
+          }
+        }
+        a {
+          color: utilities.color("Quaternary");
+          font-weight: utilities.font-weight(regular);
+          padding: 0;
+        }
+      }
+    }
+    &__mobile {
+      padding: 0;
+    }
+    &__menu-icon {
+      display: block;
+    }
     &__topbar_nav,
     &__topbar_menu {
       display: none;
       flex-direction: column;
+      padding: 0;
+    }
+    &__topbar_nav {
+      margin-top: 35px;
     }
 
     &__navigation.active {
@@ -240,11 +322,11 @@
         display: flex;
       }
     }
-
     &__mobile {
       display: flex;
       gap: 16px;
     }
+
     &__logo {
       width: 132px !important;
     }
@@ -257,30 +339,106 @@
       font-family: utilities.font-family("default");
     }
     &__gender-list {
+      gap: 24px;
       flex-direction: row;
     }
     &__icons {
       justify-content: flex-start;
       display: none;
     }
+
     &__search-bar {
       width: 100%;
     }
+
     &__topbar_nav .header__logo {
       display: none;
     }
+
     &__topbar_menu .header__search-bar {
       display: none;
     }
+
     &__mobile-top {
       justify-content: flex-start;
       gap: 8px;
+      margin-top: 8px;
     }
+
     .header__topbar_info .header__store-info {
       display: none;
     }
 
     .header__topbar_info .header__store-info:nth-child(2) {
+      display: block;
+    }
+    &__location-container {
+      display: block;
+    }
+    &__location-dropdown-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0px;
+    }
+    &__location-text {
+      font-family: utilities.font-family("default");
+      font-weight: utilities.font-weight("bold");
+      font-size: utilities.font-size("font-size-12");
+      line-height: 100%;
+      padding-top: 16px;
+      padding-bottom: 10px;
+    }
+    &__location-current {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    &__location-icon {
+      font-size: 24px;
+    }
+    &__location-name {
+      text-transform: uppercase;
+      font-size: utilities.font-size("font-size-16");
+      font-weight: utilities.font-weight("regular");
+      font-family: utilities.font-family("default");
+      color: utilities.color("Quaternary");
+      line-height: 24px;
+    }
+    &__location-change {
+      display: flex;
+      gap: 4px;
+    }
+    &__location-change-text {
+      font-family: utilities.font-family("default");
+      font-weight: utilities.font-weight("regular");
+      font-size: utilities.font-size("font-size-16");
+      line-height: 100%;
+    }
+    &__dropdown-icon-wrap {
+      margin: 0;
+      display: flex;
+      align-items: center;
+    }
+    &__location-divider {
+      border: none;
+      height: 1px;
+      background-color: utilities.pantone("Charcoal-grey");
+      margin-top: 10px;
+      margin-bottom: 36px;
+    }
+    &__button {
+      background-color: utilities.pantone("Charcoal-grey");
+      color: utilities.color("primary");
+      width: 100%;
+      border: none;
+      padding: 16px 26px;
+      font-weight: utilities.font-weight("bold");
+      font-size: utilities.font-size("font-size-16");
+      font-family: utilities.font-family("default");
+      line-height: 18px;
+    }
+    &__location-divider {
       display: block;
     }
   }
