@@ -1,3 +1,4 @@
+@use "sass:map";
 /*==================================
 =            Typography            =
 ==================================*/
@@ -7,18 +8,17 @@
 **/
 
 $font-family-basic: (
-  dm-sans: (
-    "dm-sans",
-    sans-serif,
+  din-pro: (
+    "din-pro",
   ),
-  bricolage-grotesque: (
-    "bricolage-grotesque",
+  titillium-web: (
+    "titillium-web",
   ),
 );
 
 $font-family: (
-  default: map-get($font-family-basic, dm-sans),
-  primary: map-get($font-family-basic, bricolage-grotesque),
+  default: map-get($font-family-basic, din-pro),
+  primary: map-get($font-family-basic, titillium-web),
 );
 
 $font-size: (
