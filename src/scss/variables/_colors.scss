@@ -19,6 +19,7 @@ $pantone: (
   Dark-slate-blue: #35375e,
   Light-Gray: #eeeeee,
   Black: #0000,
+  Cool-grey: #a3a6aa,
 );
 /*=====================================
 =            Colors           		 =
@@ -41,6 +42,7 @@ $background: (
   primary: map.get($pantone, Dark-slate-blue),
   secondary: map.get($pantone, White),
   tertiary: map-get($pantone, Black),
+  Quaternary: map-get($pantone, Charcoal-grey),
 );
 
 $border: (
