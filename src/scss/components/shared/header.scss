@@ -248,13 +248,16 @@ body {
     }
   }
   @include media-breakpoint-down(lg) {
-    padding: 16px 14px 16px 22px;
+    padding: 16px 16px 16px 22px;
     &.menu-open {
       background-color: utilities.background("secondary");
 
       .header__topbar {
         display: none;
         align-items: normal;
+        &::after {
+          display: none;
+        }
       }
 
       .header__logo-image {
@@ -379,7 +382,7 @@ body {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 8px 0px;
+      padding: 8px 10px 8px 0px;
     }
     &__location-text {
       font-family: utilities.font-family("default");
