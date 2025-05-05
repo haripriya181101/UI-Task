@@ -9,9 +9,125 @@
 </head>
 
 <body>
-    <div id="app">
-        hola........world
-    </div>
+    <header class="header">
+        <div class="header__topbar header__topbar_info">
+            <div class="header__store-info">
+                <a href="#"><span class="icon-truck"></span>
+                    <span>Envío gratuito a tienda</span></a>
+            </div>
+            <div class="header__store-info">
+                <a href="#"><span class="icon-truck"></span>
+                    <span>Envío gratuito a domicilio a partir de 50€</span></a>
+            </div>
+            <div class="header__store-info">
+                <a href="#"><span class="icon-top-down"></span>
+                    <span>Devoluciones hasta 60 días</span></a>
+            </div>
+        </div>
+
+        <div class="header__mobile">
+            <div class="header__mobile-top">
+                <div class="header__hamburger-container">
+
+                    <img src="./src/images/hamburger.png" alt="Menu" class="header__hamburger" id="hamburgerBtn" />
+
+
+                    <img src="./src/images/close.png" alt="Close" class="header__close-btn" id="closeBtn"
+                        style="display: none;" />
+
+                </div>
+
+
+                <figure class="header__logo">
+                    <img class="header__logo-image" src="./src/images/logo.svg" alt="Logo" />
+                </figure>
+
+                <div class="header__icons">
+                    <a href="#"><span class="icon-Usuario header__icon"></span></a>
+                    <a href="#"><span class="icon-heart header__icon"></span></a>
+                    <a href="#"><span class="icon-store header__icon"></span></a>
+                </div>
+            </div>
+
+            <div class="header__search-bar">
+                <input type="text" class="header__search" placeholder="Buscar" />
+                <span class="icon-search header__search-icon"></span>
+            </div>
+        </div>
+
+        <div class="header__navigation" id="mobileMenu">
+            <div class="header__topbar header__topbar_nav">
+                <ul class="header__gender-list">
+                    <li><a href="#">HOMBRE</a></li>
+                    <li><a href="#">MUJER</a></li>
+                    <li><a href="#">NIÑO/A</a></li>
+                </ul>
+                <hr class="header__location-divider" />
+                <figure class="header__logo">
+                    <img class="header__logo-image" src="./src/images/logo.svg" alt="Logo" />
+                </figure>
+                <div class="header__icons">
+                    <a href="#"><span class="icon-location2 header__icon"></span> </a>
+                    <a href="#"><span class="icon-Usuario header__icon"></span></a>
+                    <a href="#"><span class="icon-heart header__icon"></span></a>
+                    <a href="#"><span class="icon-store header__icon"></span></a>
+                </div>
+            </div>
+
+            <div class="header__topbar header__topbar_menu">
+                <ul class="header__menu-list">
+                    <li><a href="#">OFERTAS</a>
+                        <figure class="header__menu-icon"><img src="./src/images/greater-than.png" alt="" srcset="">
+                        </figure>
+                    </li>
+                    <li><a href="#">DESTACADOS</a>
+                        <figure class="header__menu-icon"><img src="./src/images/greater-than.png" alt="" srcset="">
+                        </figure>
+                    </li>
+                    <li><a href="#">CALZADO</a>
+                        <figure class="header__menu-icon"><img src="./src/images/greater-than.png" alt="" srcset="">
+                        </figure>
+                    </li>
+                    <li><a href="#">ACCESORIOS</a>
+                        <figure class="header__menu-icon"><img src="./src/images/greater-than.png" alt="" srcset="">
+                        </figure>
+                    </li>
+                    <li><a href="#">DEPORTES</a>
+                        <figure class="header__menu-icon"><img src="./src/images/greater-than.png" alt="" srcset="">
+                        </figure></span>
+                    </li>
+                    <li><a href="#">MARCAS</a>
+                        <figure class="header__menu-icon"><img src="./src/images/greater-than.png" alt="" srcset="">
+                        </figure>
+                    </li>
+                </ul>
+                <div class="header__location-container">
+                    <span class="header__location-text">
+                        ESTAS COMPRANDO EN
+                    </span>
+                    <div class="header__location-dropdown-wrapper">
+                        <div class="header__location-current">
+                            <span class="icon-location2 header__location-icon"></span>
+                            <span class="header__location-name">Peninsula</span>
+                        </div>
+                        <div class="header__location-change">
+                            <span class="header__location-change-text">Cambiar</span>
+                            <figure class="header__dropdown-icon-wrap">
+                                <img src="./src/images/dropdown.png" alt="">
+                            </figure>
+                        </div>
+                    </div>
+                    <hr class="header__location-divider" />
+                    <Button class="header__button">ENCUENTRA TU TIENDA</Button>
+                </div>
+
+                <div class="header__search-bar">
+                    <input type="text" class="header__search" placeholder="Buscar" />
+                    <span class="icon-search header__search-icon"></span>
+                </div>
+            </div>
+        </div>
+    </header>
     <script type="module" src="./src/js/main.js"></script>
 </body>
 

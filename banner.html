@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banner Slider</title>
+
+    <!-- ✅ Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <section class="banner">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./src/images/hero.png" alt="Slide 1" /></div>
+                <div class="swiper-slide"><img src="./src/images/hero.png" alt="Slide 2" /></div>
+                <div class="swiper-slide"><img src="./src/images/hero.png" alt="Slide 3" /></div>
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- ✅ Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- ✅ Your entry module -->
+    <script type="module" src="./src/js/main.js"></script>
+</body>
+
+</html>
