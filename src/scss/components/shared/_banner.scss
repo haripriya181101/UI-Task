@@ -1,20 +1,13 @@
-// style.scss or partials
-@use "swiper/scss"; // base styles
-@use "swiper/scss/navigation";
-@use "swiper/scss/pagination";
-
-.swiper {
-  height: 400px;
-
-  .swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+@use "../../variables/utilities" as utilities;
+@use "bootstrap/scss/bootstrap" as *;
+.banner{
+  &__swiper{
+    position: relative;
+  }
+  &__desc{
+    position: absolute;
+    z-index: 1;
+    bottom: 200px;
+    left: 100px;
   }
 }

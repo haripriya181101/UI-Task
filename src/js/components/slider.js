@@ -1,11 +1,12 @@
-// src/js/components/slider.js
 import Swiper from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
-export default function initSlider() {
+document.addEventListener("DOMContentLoaded", function () {
+  console.log("hloooo");
+  
   new Swiper(".swiper", {
     modules: [Navigation, Pagination, Autoplay],
     loop: true,
@@ -22,4 +23,4 @@ export default function initSlider() {
       prevEl: ".swiper-button-prev",
     },
   });
-}
+});
