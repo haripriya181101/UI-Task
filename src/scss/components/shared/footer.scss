@@ -35,7 +35,7 @@
       );
     }
     &_casual {
-      text-transform: lowercase;
+      text-transform: uppercase;
       width: 286px;
       text-align: center;
       &::after {
@@ -57,6 +57,11 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    &_primary{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__desc {
@@ -70,6 +75,13 @@
     margin: 0;
     &_link {
       width: 0;
+    }
+    &_primary{
+      display: none;
+      font-family: utilities.font-family("primary");
+      font-weight: utilities.font-weight("bold");
+      font-size: utilities.font-size("font-size-12");
+      color: rgba(255, 255, 255, 0.6);
     }
   }
 
@@ -122,6 +134,9 @@
     display: flex;
     gap: 65px;
     margin-top: 28px;
+    &_primary{
+      display: none;
+    }
   }
   &__location-icon {
     color: utilities.color("primary");
@@ -152,6 +167,12 @@
     gap: 12px;
     justify-content: center;
     margin-top: 49px;
+    min-width: 318px;
+    &_responsive{
+      background-color: utilities.background("secondary");
+      color: utilities.color("Quaternary");
+      display: none;
+    }
   }
   &__logo {
     color: utilities.color("primary");
@@ -173,7 +194,7 @@
     }
   }
   &__sticker-wrapper {
-    width: 290px;
+    width: 318px;
     margin-top: 35px;
 
     img {
@@ -252,13 +273,14 @@
       }
     }
     &__title {
-      padding-top: 32px;
+      padding-top: 37px;
       &::after {
         display: none;
       }
     }
     &__responsive-dropdown {
       display: block;
+      margin-top: 23px;
     }
     &__section {
       .footer__inner-list {
@@ -299,8 +321,6 @@
     }
     &__bottom{
       padding: 24px;
-    }
-    &__bottom{
       flex-direction: column;
     }
     &__bottom-list {
@@ -310,6 +330,45 @@
     & &__copy-right{
       margin-top: 19px;
       font-weight: utilities.font-weight("bold");
+    }
+    &__desc{
+      &_primary{
+        display: block;
+        padding-top: 19px;
+      }
+    }
+    &__location {
+      &_primary{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 4px;
+      }
+    }
+    &__button{
+      margin-top: 32px;
+      &_responsive{
+        display: block;
+        width: 100%;
+      }
+    }
+    &__payment-wrapper {
+      display: none;
+    }
+    &__title{
+      padding-bottom: 10px;
+      &_casual{
+       text-align: center;
+       width: 100%;
+      }
+    }
+    &__inner-list{
+      li{
+        width: 100%;
+      }
+    }
+    &__sticker-wrapper{
+      width: 100%;
+      margin-top: 0;
     }
   }
 }

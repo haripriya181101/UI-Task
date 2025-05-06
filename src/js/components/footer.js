@@ -4,15 +4,9 @@ document.addEventListener("DOMContentLoaded", function () {
   if (window.innerWidth <= 768 && firstSection) {
     firstSection.classList.add("active");
   }
-
   footerTitles.forEach(title => {
     title.addEventListener("click", function () {
       const clickedSection = title.closest(".footer__section");
-      document.querySelectorAll(".footer__section").forEach(section => {
-        if (section !== clickedSection) {
-          section.classList.remove("active");
-        }
-      });
       clickedSection.classList.toggle("active");
     });
   });
