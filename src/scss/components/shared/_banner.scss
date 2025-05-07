@@ -1,13 +1,132 @@
 @use "../../variables/utilities" as utilities;
 @use "bootstrap/scss/bootstrap" as *;
-.banner{
-  &__swiper{
+
+.banner {
+  position: relative;
+
+  &__swiper {
+    width: 100%;
     position: relative;
   }
-  &__desc{
+
+  &__slider {
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__desc {
     position: absolute;
-    z-index: 1;
     bottom: 200px;
-    left: 100px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    color: white;
+    padding: 0 100px;
+
+    @include media-breakpoint-down(md) {
+      padding: 0 24px;
+      bottom: 100px;
+    }
+  }
+
+  &__title {
+    font-family: utilities.pantone("default");
+    color: utilities.pantone("Tropical-mint");
+    font-size: utilities.font-size("font-size-120");
+    font-weight: 900;
+    margin: 0;
+    line-height: 100%;
+    margin-top: 52px;
+
+    @include media-breakpoint-down(md) {
+      font-size: utilities.font-size("font-size-40");
+    }
+  }
+
+  &__content {
+    width: 550px;
+    font-family: utilities.pantone("default");
+    font-size: utilities.font-size("font-size-20");
+    font-weight: utilities.font-weight("regular");
+    margin: 0;
+    line-height: 135%;
+
+    @include media-breakpoint-down(md) {
+      width: auto;
+    }
+  }
+
+  &__button {
+    font-family: utilities.pantone("default");
+    font-size: utilities.font-size("font-size-18");
+    font-weight: utilities.font-weight("bold");
+    color: utilities.color("primary");
+    background-color: transparent;
+    border: 2px solid utilities.color("primary");
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 22px;
+    margin-top: 52px;
+  }
+
+  &__adidas {
+    width: 62px;
+    height: 42px;
+    margin: 0;
+  }
+
+  .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    background-color: transparent;
+    opacity: 1;
+    border: 1px solid utilities.color("primary");
+    margin: 0 6px;
+    transition: background-color 0.3s;
+  }
+
+  .swiper-pagination-bullet-active {
+    width: 32px;
+    border-radius: 4px;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: absolute;
+    z-index: 2;
+    width: 56px;
+    height: 56px;
+    border: 2px solid utilities.color("primary");
+    border-radius: 33px;
+
+    &::after {
+      font-size: 14px;
+      color: utilities.color("primary");
+    }
+  }
+
+  .swiper-nav-vertical {
+    position: absolute;
+    right: 100px;
+    top: 56%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    z-index: 5;
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      position: relative;
+      right: -10px;
+      top: auto;
+    }
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
   }
 }

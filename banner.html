@@ -13,22 +13,41 @@
     <section class="banner">
         <div class="swiper banner__swiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="./src/images/hero.png" alt="Slide 1" /></div>
-                <div class="swiper-slide"><img src="./src/images/hero.png" alt="Slide 2" /></div>
-                <div class="swiper-slide"><img src="./src/images/hero.png" alt="Slide 3" /></div>
+                <div class="swiper-slide banner__slider">
+                    <img src="./src/images/hero.png" alt="Slide 1" />
+                </div>
+                <div class="swiper-slide banner__slider">
+                    <img src="./src/images/hero.png" alt="Slide 2" />
+                </div>
+                <div class="swiper-slide banner__slider">
+                    <img src="./src/images/hero.png" alt="Slide 3" />
+                </div>
+            </div>
+            <div class="swiper-nav-vertical">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
 
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
             <div class="swiper-pagination"></div>
         </div>
+
         <div class="banner__desc">
-            <figure>
-                <img src="src/images/adidas.png" alt="">
+            <figure class="banner__adidas">
+                <picture>
+                    <source srcset="src/images/adidas.png" media="(min-width: 992px)" />
+
+                    <img src="src/images/nike.png" alt="Brand logo" />
+                </picture>
             </figure>
-            <H1>RUN FALCON</H1>
-            <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit vitae pharetra nec auctor diam.</P>
-            <button>HOMBRE</button>
+
+            <p class="banner__title">RUN FALCON</p>
+            <p class="banner__content">
+                Inspired by black panther, this innovative new shoe features a mix of
+                mesh and primeknit over a 3D-printed sole.
+            </p>
+            <button class="banner__button">
+                <span class="icon-right-arrow"></span><span> HOMBRE</span>
+            </button>
         </div>
     </section>
     <script type="module" src="./src/js/main.js"></script>

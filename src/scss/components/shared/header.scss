@@ -1,8 +1,8 @@
 @use "../../variables/utilities" as utilities;
 @use "bootstrap/scss/bootstrap" as *;
-body {
-  background-color: utilities.background("primary");
-}
+// body {
+//   background-color: utilities.background("primary");
+// }
 .header {
   padding: 0px 114px;
 
