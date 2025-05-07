@@ -7,6 +7,14 @@
   font-style: normal;
   font-display: swap;
 }
+// DIN-pro - font-weight : 500
+@font-face {
+  font-family: "din-pro";
+  src: url("/src/fonts/din-pro/dinpro_medium.otf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
 // DIN-pro - font-weight : 900
 @font-face {
   font-family: "din-pro";
