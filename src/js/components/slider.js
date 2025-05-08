@@ -5,23 +5,30 @@ import "swiper/css/pagination";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
 document.addEventListener("DOMContentLoaded", function () {
-  new Swiper(".swiper", {
-    modules: [Navigation, Pagination, Autoplay],
-    slidesPerView: "auto",
-    spaceBetween: 12,
+  // Banner Swiper
+  new Swiper(".banner-swiper", {
+    modules: [Pagination, Autoplay],
+    slidesPerView: 1,
     loop: true,
-    loopedSlides: 10,
     autoplay: {
-      delay: 1000,
+      delay: 3000,
       disableOnInteraction: false,
     },
     pagination: {
-      el: ".swiper-pagination",
+      el: ".banner-swiper .swiper-pagination",
       clickable: true,
     },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+  });
+
+  new Swiper(".brand-swiper", {
+    modules: [Autoplay],
+    loop: true,
+    slidesPerView: "auto",
+    spaceBetween: 12,
+    speed: 1000,
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
     },
   });
 });
