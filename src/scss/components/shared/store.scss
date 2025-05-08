@@ -1,0 +1,52 @@
+@use "../../variables/utilities" as utilities;
+@use "bootstrap/scss/bootstrap" as *;
+.store {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__section {
+    background-color: utilities.pantone("Light-gray");
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &__title {
+    font-family: utilities.pantone("default");
+    color: utilities.color("Quaternary");
+    font-size: utilities.font-size("font-size-38");
+    font-weight: utilities.font-weight("bold");
+    line-height: 120%;
+    text-transform: uppercase;
+    max-width: 626px;
+    margin-bottom: 2px;
+  }
+  &__content {
+    font-family: utilities.pantone("default");
+    color: utilities.color("Quaternary");
+    font-size: utilities.font-size("font-size-20");
+    font-weight: utilities.font-weight("regular");
+    line-height: 135%;
+    margin-bottom: 48px;
+    max-width: 626px;
+  }
+  &__button {
+    padding: 12px 24px;
+    border: 1px solid utilities.color("Quaternary");
+    background-color: transparent;
+    font-family: utilities.pantone("default");
+    font-size: utilities.font-size("font-size-20");
+    font-weight: utilities.font-weight("bold");
+  }
+  &__section-image {
+    height: 500px;
+    margin: 0;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
