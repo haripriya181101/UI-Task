@@ -1,0 +1,36 @@
+@use "../../variables/utilities" as utilities;
+@use "bootstrap/scss/bootstrap" as *;
+.brand {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+
+  &__title {
+    color: utilities.color("Quaternary");
+    font-weight: utilities.font-weight("bold");
+    font-family: utilities.font-family("default");
+    font-size: utilities.font-size("font-size-28");
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 100%;
+    margin-top: 79px;
+    margin-bottom: 49px;
+  }
+  &__brands {
+    display: flex;
+  }
+
+  &__brand-name {
+    width: 186px !important;
+    height: 88px !important;
+    border: 1px solid utilities.pantone("Light-grayish-blue");
+  }
+  &__image {
+    margin: 0;
+  }
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

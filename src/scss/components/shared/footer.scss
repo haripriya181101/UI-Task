@@ -57,7 +57,7 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    &_primary{
+    &_primary {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -76,7 +76,7 @@
     &_link {
       width: 0;
     }
-    &_primary{
+    &_primary {
       display: none;
       font-family: utilities.font-family("primary");
       font-weight: utilities.font-weight("bold");
@@ -134,7 +134,7 @@
     display: flex;
     gap: 65px;
     margin-top: 28px;
-    &_primary{
+    &_primary {
       display: none;
     }
   }
@@ -168,7 +168,7 @@
     justify-content: center;
     margin-top: 49px;
     min-width: 318px;
-    &_responsive{
+    &_responsive {
       background-color: utilities.background("secondary");
       color: utilities.color("Quaternary");
       display: none;
@@ -227,7 +227,7 @@
   &__responsive-dropdown {
     display: none;
   }
-  &__bottom{
+  &__bottom {
     display: flex;
     justify-content: space-between;
     padding: 13px 153px 45px 160px;
@@ -244,7 +244,7 @@
     padding: 0;
     margin: 0;
   }
-  &__copy-right{
+  &__copy-right {
     color: utilities.color("Quaternary");
     font-weight: utilities.font-weight("regular");
     font-size: utilities.font-size("font-size-14");
@@ -319,34 +319,34 @@
         transform: translateY(-50%);
       }
     }
-    &__bottom{
+    &__bottom {
       padding: 24px;
       flex-direction: column;
     }
     &__bottom-list {
-    flex-direction: column;
-    gap: 16px;
+      flex-direction: column;
+      gap: 16px;
     }
-    & &__copy-right{
+    & &__copy-right {
       margin-top: 19px;
       font-weight: utilities.font-weight("bold");
     }
-    &__desc{
-      &_primary{
+    &__desc {
+      &_primary {
         display: block;
         padding-top: 19px;
       }
     }
     &__location {
-      &_primary{
+      &_primary {
         display: flex;
         justify-content: space-between;
         margin-top: 4px;
       }
     }
-    &__button{
+    &__button {
       margin-top: 32px;
-      &_responsive{
+      &_responsive {
         display: block;
         width: 100%;
       }
@@ -354,19 +354,19 @@
     &__payment-wrapper {
       display: none;
     }
-    &__title{
+    &__title {
       padding-bottom: 10px;
-      &_casual{
-       text-align: center;
-       width: 100%;
-      }
-    }
-    &__inner-list{
-      li{
+      &_casual {
+        text-align: center;
         width: 100%;
       }
     }
-    &__sticker-wrapper{
+    &__inner-list {
+      li {
+        width: 100%;
+      }
+    }
+    &__sticker-wrapper {
       width: 100%;
       margin-top: 0;
     }

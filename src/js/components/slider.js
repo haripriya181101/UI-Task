@@ -7,9 +7,12 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 document.addEventListener("DOMContentLoaded", function () {
   new Swiper(".swiper", {
     modules: [Navigation, Pagination, Autoplay],
+    slidesPerView: "auto",
+    spaceBetween: 12,
     loop: true,
+    loopedSlides: 10,
     autoplay: {
-      delay: 3000,
+      delay: 1000,
       disableOnInteraction: false,
     },
     pagination: {
