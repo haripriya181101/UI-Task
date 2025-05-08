@@ -1,8 +1,9 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   const hamburgerBtn = document.getElementById("hamburgerBtn");
   const closeBtn = document.getElementById("closeBtn");
   const mobileMenu = document.getElementById("mobileMenu");
   const header = document.querySelector(".header");
+
   if (hamburgerBtn && closeBtn && mobileMenu && header) {
     hamburgerBtn.addEventListener("click", () => {
       mobileMenu.classList.add("active");
@@ -18,6 +19,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
       closeBtn.style.display = "none";
       hamburgerBtn.style.display = "inline";
+    });
+
+    // Add sticky class on scroll
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 0) {
+        header.classList.add("is-sticky");
+      } else {
+        header.classList.remove("is-sticky");
+      }
     });
   }
 });
