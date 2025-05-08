@@ -3,7 +3,7 @@
 .brand {
   display: flex;
   justify-content: center;
-  margin: 0;
+  margin-bottom: 128px;
 
   &__title {
     color: utilities.color("Quaternary");
