@@ -21,7 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
       hamburgerBtn.style.display = "inline";
     });
 
-    // Add sticky class on scroll
     window.addEventListener("scroll", () => {
       if (window.scrollY > 0) {
         header.classList.add("is-sticky");
