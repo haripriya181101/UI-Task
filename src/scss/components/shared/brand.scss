@@ -4,7 +4,10 @@
   display: flex;
   justify-content: center;
   margin-bottom: 128px;
-
+  &__wrapper {
+    width: 100%;
+    overflow: hidden;
+  }
   &__title {
     color: utilities.color("Quaternary");
     font-weight: utilities.font-weight("bold");
