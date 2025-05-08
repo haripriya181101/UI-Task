@@ -14,13 +14,22 @@
         <div class="swiper banner__swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide banner__slider">
-                    <img src="./src/images/hero.png" alt="Slide 1" />
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="./src/images/hero-responsive.png" />
+                        <img src="./src/images/hero.png" alt="Slide 1" />
+                    </picture>
                 </div>
                 <div class="swiper-slide banner__slider">
-                    <img src="./src/images/hero.png" alt="Slide 2" />
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="./src/images/hero-responsive.png" />
+                        <img src="./src/images/hero.png" alt="Slide 2" />
+                    </picture>
                 </div>
                 <div class="swiper-slide banner__slider">
-                    <img src="./src/images/hero.png" alt="Slide 3" />
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="./src/images/hero-responsive.png" />
+                        <img src="./src/images/hero.png" alt="Slide 3" />
+                    </picture>
                 </div>
             </div>
             <div class="swiper-nav-vertical">
@@ -35,7 +44,6 @@
             <figure class="banner__adidas">
                 <picture>
                     <source srcset="src/images/adidas.png" media="(min-width: 992px)" />
-
                     <img src="src/images/nike.png" alt="Brand logo" />
                 </picture>
             </figure>
@@ -50,6 +58,7 @@
             </button>
         </div>
     </section>
+
     <script type="module" src="./src/js/main.js"></script>
 </body>
 
