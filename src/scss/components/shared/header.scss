@@ -1,10 +1,11 @@
 @use "../../variables/utilities" as utilities;
 @use "bootstrap/scss/bootstrap" as *;
-// body {
-//   background-color: utilities.background("primary");
-// }
+
 .header {
   padding: 0px 114px;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
 
   &__topbar {
     display: flex;
@@ -246,6 +247,9 @@
     &__topbar {
       align-items: baseline;
     }
+  }
+  @include media-breakpoint-down(xl) {
+    padding: 0px 24px;
   }
   @include media-breakpoint-down(lg) {
     padding: 16px 16px 16px 22px;
