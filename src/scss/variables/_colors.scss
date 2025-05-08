@@ -13,19 +13,14 @@
 */
 
 $pantone: (
-  Olive-Green: #a2a765,
-  Dark-Green-Cyan: #08443b,
-  Light-Beige: #f4f4e5,
-  Camel-Brown: #b9975e,
-  Deep-Coffee-Brown: #634233,
-  Tranquil: #f4f9f9,
-  Gainsboro: #dddddd,
   White: #ffffff,
-  Black: #000000,
-  Tomato-Red: #ff3b30,
-  Apple-Green: #34c759,
-  Dark-Grey: #666666,
-  Pale-Lime: #e4e5cb,
+  Charcoal-grey: #2e2e2e,
+  Indigo: #303263,
+  Dark-slate-blue: #35375e,
+  Light-Gray: #eeeeee,
+  Black: #0000,
+  Tropical-mint: #24dbaf,
+  Cool-grey: #a3a6aa,
 );
 /*=====================================
 =            Colors           		 =
@@ -37,16 +32,18 @@ $pantone: (
 	
 	This colors can be included in scss files althought we can create intermediate colors referencing this ones if we need so.
 */
-$colors: (
-  primary: map.get($pantone, Light-Beige),
-  secondary: map.get($pantone, Dark-Grey),
+$color: (
+  primary: map.get($pantone, White),
+  secondary: map.get($pantone, Indigo),
+  tertiary: map-get($pantone, Dark-slate-blue),
+  Quaternary: map-get($pantone, Charcoal-grey),
 );
 
 $background: (
-  primary: map.get($pantone, Light-Beige),
-  secondary: map.get($pantone, Dark-Green-Cyan),
-  tertiary: map.get($pantone, White),
-  Quaternary: map.get($pantone, Olive-Green),
+  primary: map.get($pantone, Dark-slate-blue),
+  secondary: map.get($pantone, White),
+  tertiary: map-get($pantone, Black),
+  Quaternary: map-get($pantone, Charcoal-grey),
 );
 
 $border: (

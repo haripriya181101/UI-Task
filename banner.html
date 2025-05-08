@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banner Slider</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <section class="banner">
+        <div class="swiper banner__swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide banner__slider">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="./src/images/hero-responsive.png" />
+                        <img src="./src/images/hero.png" alt="Slide 1" />
+                    </picture>
+                </div>
+                <div class="swiper-slide banner__slider">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="./src/images/hero-responsive.png" />
+                        <img src="./src/images/hero.png" alt="Slide 2" />
+                    </picture>
+                </div>
+                <div class="swiper-slide banner__slider">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="./src/images/hero-responsive.png" />
+                        <img src="./src/images/hero.png" alt="Slide 3" />
+                    </picture>
+                </div>
+            </div>
+
+            <!-- Custom navigation -->
+            <div class="swiper-nav-vertical">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="banner__desc">
+            <figure class="banner__adidas">
+                <picture>
+                    <source srcset="src/images/adidas.png" media="(min-width: 992px)" />
+                    <img src="src/images/nike.png" alt="Brand logo" />
+                </picture>
+            </figure>
+
+            <p class="banner__title">RUN FALCON</p>
+            <p class="banner__content">
+                Inspired by black panther, this innovative new shoe features a mix of mesh and primeknit over a
+                3D-printed sole.
+            </p>
+            <button class="banner__button">
+                <span class="icon-right-arrow"></span><span> HOMBRE</span>
+            </button>
+        </div>
+    </section>
+
+    <script type="module" src="./src/js/main.js"></script>
+</body>
+
+</html>
