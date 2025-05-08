@@ -56,15 +56,17 @@ $font-size: (
   font-size-9: rem-calc(9),
   font-size-10: rem-calc(10),
   font-size-12: rem-calc(12),
-  // Correctly using rem-calc for font sizes
   font-size-13: rem-calc(13),
   font-size-14: rem-calc(14),
   font-size-16: rem-calc(16),
+  font-size-15: rem-calc(15),
   font-size-18: rem-calc(18),
+  font-size-20: rem-calc(20),
   font-size-22: rem-calc(22),
   font-size-24: rem-calc(24),
   font-size-25: rem-calc(25),
   font-size-32: rem-calc(32),
+  font-size-33: rem-calc(33),
   font-size-40: rem-calc(40),
   font-size-48: rem-calc(48),
   font-size-50: rem-calc(50),
@@ -73,10 +75,10 @@ $font-size: (
   font-size-65: rem-calc(65),
   font-size-75: rem-calc(75),
   font-size-96: rem-calc(96),
-  size-20: rem-calc(20),
-  // base font size (should not be changed unless necessary)
+  font-size-120: rem-calc(120),
+  /* base font size. Do not touch if you don't know what you're doing */ size-20:
+    rem-calc(20),
 );
-
 @function font-family($name) {
   @return map-get($font-family, $name);
 }

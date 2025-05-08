@@ -9,8 +9,376 @@
 </head>
 
 <body>
-    <div id="app">
-        hola........world
+    <div>
+        <header class="header">
+            <div class="header__topbar header__topbar_info">
+                <div class="header__store-info">
+                    <a href="#"><span class="icon-truck"></span>
+                        <span>Envío gratuito a tienda</span></a>
+                </div>
+                <div class="header__store-info">
+                    <a href="#"><span class="icon-truck"></span>
+                        <span>Envío gratuito a domicilio a partir de 50€</span></a>
+                </div>
+                <div class="header__store-info">
+                    <a href="#"><span class="icon-top-down"></span>
+                        <span>Devoluciones hasta 60 días</span></a>
+                </div>
+            </div>
+
+            <div class="header__mobile">
+                <div class="header__mobile-top">
+                    <div class="header__hamburger-container">
+
+                        <img src="./src/images/hamburger.png" alt="Menu" class="header__hamburger" id="hamburgerBtn" />
+
+
+                        <img src="./src/images/close.png" alt="Close" class="header__close-btn" id="closeBtn"
+                            style="display: none;" />
+
+                    </div>
+
+
+                    <figure class="header__logo">
+                        <img class="header__logo-image" src="./src/images/logo.svg" alt="Logo" />
+                    </figure>
+
+                    <div class="header__icons">
+                        <a href="#"><span class="icon-Usuario header__icon"></span></a>
+                        <a href="#"><span class="icon-heart header__icon"></span></a>
+                        <a href="#"><span class="icon-store header__icon"></span></a>
+                    </div>
+                </div>
+
+                <div class="header__search-bar">
+                    <input type="text" class="header__search" placeholder="Buscar" />
+                    <span class="icon-search header__search-icon"></span>
+                </div>
+            </div>
+
+            <div class="header__navigation" id="mobileMenu">
+                <div class="header__topbar header__topbar_nav">
+                    <ul class="header__gender-list">
+                        <li><a href="#">HOMBRE</a></li>
+                        <li><a href="#">MUJER</a></li>
+                        <li><a href="#">NIÑO/A</a></li>
+                    </ul>
+                    <hr class="header__location-divider" />
+                    <figure class="header__logo">
+                        <img class="header__logo-image" src="./src/images/logo.svg" alt="Logo" />
+                    </figure>
+                    <div class="header__icons">
+                        <a href="#"><span class="icon-location2 header__icon"></span> </a>
+                        <a href="#"><span class="icon-Usuario header__icon"></span></a>
+                        <a href="#"><span class="icon-heart header__icon"></span></a>
+                        <a href="#"><span class="icon-store header__icon"></span></a>
+                    </div>
+                </div>
+
+                <div class="header__topbar header__topbar_menu">
+                    <ul class="header__menu-list">
+                        <li><a href="#">OFERTAS</a>
+                            <figure class="header__menu-icon"><img src="./src/images/greater-than.png" alt="" srcset="">
+                            </figure>
+                        </li>
+                        <li><a href="#">DESTACADOS</a>
+                            <figure class="header__menu-icon"><img src="./src/images/greater-than.png" alt="" srcset="">
+                            </figure>
+                        </li>
+                        <li><a href="#">CALZADO</a>
+                            <figure class="header__menu-icon"><img src="./src/images/greater-than.png" alt="" srcset="">
+                            </figure>
+                        </li>
+                        <li><a href="#">ACCESORIOS</a>
+                            <figure class="header__menu-icon"><img src="./src/images/greater-than.png" alt="" srcset="">
+                            </figure>
+                        </li>
+                        <li><a href="#">DEPORTES</a>
+                            <figure class="header__menu-icon"><img src="./src/images/greater-than.png" alt="" srcset="">
+                            </figure></span>
+                        </li>
+                        <li><a href="#">MARCAS</a>
+                            <figure class="header__menu-icon"><img src="./src/images/greater-than.png" alt="" srcset="">
+                            </figure>
+                        </li>
+                    </ul>
+                    <div class="header__location-container">
+                        <span class="header__location-text">
+                            ESTAS COMPRANDO EN
+                        </span>
+                        <div class="header__location-dropdown-wrapper">
+                            <div class="header__location-current">
+                                <span class="icon-location2 header__location-icon"></span>
+                                <span class="header__location-name">Peninsula</span>
+                            </div>
+                            <div class="header__location-change">
+                                <span class="header__location-change-text">Cambiar</span>
+                                <figure class="header__dropdown-icon-wrap">
+                                    <img src="./src/images/dropdown.png" alt="">
+                                </figure>
+                            </div>
+                        </div>
+                        <hr class="header__location-divider" />
+                        <Button class="header__button">ENCUENTRA TU TIENDA</Button>
+                    </div>
+
+                    <div class="header__search-bar">
+                        <input type="text" class="header__search" placeholder="Buscar" />
+                        <span class="icon-search header__search-icon"></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="banner">
+            <div class="swiper banner__swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide banner__slider">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="./src/images/hero-responsive.png" />
+                            <img src="./src/images/hero.png" alt="Slide 1" />
+                        </picture>
+                    </div>
+                    <div class="swiper-slide banner__slider">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="./src/images/hero-responsive.png" />
+                            <img src="./src/images/hero.png" alt="Slide 2" />
+                        </picture>
+                    </div>
+                    <div class="swiper-slide banner__slider">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="./src/images/hero-responsive.png" />
+                            <img src="./src/images/hero.png" alt="Slide 3" />
+                        </picture>
+                    </div>
+                </div>
+                <div class="swiper-nav-vertical">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="banner__desc">
+                <figure class="banner__adidas">
+                    <picture>
+                        <source srcset="src/images/adidas.png" media="(min-width: 992px)" />
+                        <img src="src/images/nike.png" alt="Brand logo" />
+                    </picture>
+                </figure>
+
+                <p class="banner__title">RUN FALCON</p>
+                <p class="banner__content">
+                    Inspired by black panther, this innovative new shoe features a mix of
+                    mesh and primeknit over a 3D-printed sole.
+                </p>
+                <button class="banner__button">
+                    <span class="icon-right-arrow"></span><span> HOMBRE</span>
+                </button>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="footer__wrapper">
+                <ul class="footer__list">
+                    <li class="footer__section dropdown">
+                        <div class="footer__title-wrap">
+                            <h5 class="footer__title dropdown__toggle">¿Necesitas ayuda?</h5>
+                            <figure class="footer__responsive-dropdown">
+                                <img src="./src/images/responsive-dropdown.png" alt="">
+                            </figure>
+                        </div>
+                        <span class="icon-dropdow"></span>
+                        <ul class="footer__inner-list">
+                            <li>
+                                <p class="footer__desc">
+                                    Estamos a tu disposición para ayudarte en tu compra online
+                                </p>
+                            </li>
+                            <li class="footer__mail-wrap">
+                                <span class="icon-mail footer__mail-icon"></span>
+                                <h5 class="footer__email">937 970 248</h5>
+                            </li>
+                            <li class="footer__mail-wrap">
+                                <span class="icon-mail footer__mail-icon"></span>
+                                <h5 class="footer__email">atencionalcliente@base.net</h5>
+                            </li>
+                            <li>
+                                <p class="footer__timing">Lunes - sábado de 10:00 - 20:00</p>
+                            </li>
+                            <li>
+                                <p class="footer__desc">
+                                    Para información comercial, envía un email a
+                                    movimeintosbase@base.net
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="footer__section dropdown">
+                        <div class="footer__title-wrap">
+                            <h5 class="footer__title dropdown__toggle">Sobre Base</h5>
+                            <figure class="footer__responsive-dropdown">
+                                <img src="./src/images/responsive-dropdown.png" alt="">
+                            </figure>
+                        </div>
+
+                        <ul class="footer__inner-list">
+                            <li>
+                                <p class="footer__desc">Sobre nosotros</p>
+                            </li>
+                            <li>
+                                <p class="footer__desc">Trabaja con nosotros</p>
+                            </li>
+                            <li>
+                                <p class="footer__social-wrap">
+                                    <span class="icon-facebook footer__social-media"></span>
+                                    <span class="icon-facebook footer__social-media"></span>
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="footer__list">
+                    <li class="footer__section dropdown">
+                        <div class="footer__title-wrap">
+                            <h5 class="footer__title dropdown__toggle">Atención al cliente</h5>
+                            <figure class="footer__responsive-dropdown">
+                                <img src="./src/images/responsive-dropdown.png" alt="">
+                            </figure>
+                        </div>
+
+                        <ul class="footer__inner-list">
+                            <li>
+                                <p class="footer__desc">Preguntas frecuentes</p>
+                            </li>
+                            <li>
+                                <p class="footer__desc">Envíos</p>
+                            </li>
+                            <li>
+                                <p class="footer__desc">Devoluciones</p>
+                            </li>
+                            <li>
+                                <p class="footer__desc">Seguimiento del pedido</p>
+                            </li>
+                            <li>
+                                <p class="footer__desc">Condiciones de uso</p>
+                            </li>
+                            <li>
+                                <p class="footer__desc">Contacto</p>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="footer__section dropdown">
+                        <div class="footer__title-wrap">
+                            <h5 class="footer__title dropdown__toggle">ESTAS COMPRANDO EN</h5>
+                            <figure class="footer__responsive-dropdown">
+                                <img src="./src/images/responsive-dropdown.png" alt="">
+                            </figure>
+                        </div>
+
+                        <ul class="footer__inner-list">
+                            <li>
+                                <div class="footer__location">
+                                    <p class="footer__location-wrap">
+                                        <span class="icon-location2 footer__location-icon"></span>
+                                        <span class="footer__email">PENINSULA</span>
+                                    </p>
+                                    <div class="footer__change">
+                                        <span class="footer__change-desc">Cambiar</span>
+                                        <figure class="footer__dropdown">
+                                            <picture>
+                                                <source media="(max-width: 768px)"
+                                                    srcset="src/images/responsive-dropdown.png" />
+
+                                                <img src="src/images/footer-dropdown.svg" alt="Dropdown icon" />
+                                            </picture>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <button class="footer__button">
+                                    BUSCA TU TIENDA <span class="icon-right-arrow"></span>
+                                </button>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="footer__list">
+                    <li class="footer__section dropdown">
+                        <div class="footer__title-wrap">
+                            <h5 class="footer__title dropdown__toggle">Pago seguro</h5>
+                            <figure class="footer__responsive-dropdown">
+                                <img src="./src/images/responsive-dropdown.png" alt="">
+                            </figure>
+                        </div>
+
+                        <ul class="footer__inner-list">
+                            <li><span class="icon-logo footer__logo"></span></li>
+                        </ul>
+                    </li>
+
+                    <li class="footer__section dropdown">
+                        <div class="footer__title-wrap">
+                            <h5 class="footer__title dropdown__toggle">Metodos de pago</h5>
+                            <figure class="footer__responsive-dropdown">
+                                <img src="./src/images/responsive-dropdown.png" alt="">
+                            </figure>
+                        </div>
+                        <ul class="footer__inner-list">
+                            <li>
+                                <figure class="footer__payment-wrapper">
+                                    <img src="./src/images/payment.png" alt="" />
+                                </figure>
+                            </li>
+                            <li class="footer__desc footer__desc_primary">ESTAS BUSCANDO EN</li>
+                            <li>
+                                <div class="footer__location footer__location_primary">
+                                    <p class="footer__location-wrap">
+                                        <span class="icon-location2 footer__location-icon"></span>
+                                        <span class="footer__email">PENINSULA</span>
+                                    </p>
+                                    <div class="footer__change">
+                                        <span class="footer__change-desc">Cambiar</span>
+                                        <figure class="footer__dropdown">
+                                            <picture>
+                                                <source media="(max-width: 768px)"
+                                                    srcset="src/images/responsive-dropdown.png" />
+
+                                                <img src="src/images/footer-dropdown.svg" alt="Dropdown icon" />
+                                            </picture>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <button class="footer__button footer__button_responsive">
+                                    BUSCA TU TIENDA <span class="icon-right-arrow"></span>
+                                </button>
+                            </li>
+                            <li>
+                                <h5 class="footer__title footer__title_casual dropdown__toggle">Descubre nuestra web
+                                    exclusiva de casual</h5>
+                            </li>
+                            <li>
+                                <figure class="footer__sticker-wrapper">
+                                    <img src="./src/images/sticker.svg" alt="" />
+                                </figure>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__bottom">
+                <ul class="footer__bottom-list">
+                    <li>Política de privacidad</li>
+                    <li>Política de cookies</li>
+                    <li>Anuncios, convocatorias e información al accionista</li>
+                    <li>Formulario de desistimiento</li>
+                </ul>
+                <p class="footer__copy-right">@ Base 2021. Todos los derechos reservados</p>
+            </div>
+        </footer>
     </div>
     <script type="module" src="./src/js/main.js"></script>
 </body>
