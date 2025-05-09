@@ -1,0 +1,90 @@
+@use "../../variables/utilities" as utilities;
+@use "bootstrap/scss/bootstrap" as *;
+.subscribe {
+  display: flex;
+  justify-content: center;
+  margin-top: 116px;
+  margin-bottom: 139px;
+  &__wrapper {
+    max-width: 743px;
+  }
+  &__title {
+    font-family: utilities.font-family("default");
+    color: utilities.color("Quaternary");
+    font-size: utilities.font-size("font-size-28");
+    font-weight: utilities.font-weight("bold");
+    margin: 0;
+    line-height: 100%;
+    width: 743px;
+    text-align: center;
+  }
+  &__input-wrapper {
+    display: flex;
+    width: 100%;
+  }
+  &__input {
+    padding: 14px 8px;
+    border: 1px solid utilities.pantone("Light-grayish-blue");
+    width: 100%;
+  }
+  &__button {
+    padding: 14px 24px;
+    border: transparent;
+    background-color: utilities.background("Quaternary");
+    display: flex;
+    gap: 12px;
+  }
+  &__form {
+    margin-top: 68px;
+    margin-bottom: 20px;
+  }
+  &__subscribe-btn {
+    font-size: utilities.font-size("font-size-18");
+    font-weight: utilities.font-weight("bold");
+    text-transform: uppercase;
+    color: utilities.color("primary");
+    line-height: 120%;
+  }
+  &__arrow {
+    color: utilities.color("primary");
+    font-size: 24px;
+  }
+  &__checkbox {
+    width: 17px;
+    height: 17px;
+    border: 1px solid utilities.pantone("Light-grayish-blue");
+  }
+  &__confirm-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+  }
+  &__confirmation {
+    font-family: utilities.font-family("default");
+    color: utilities.color("Quaternary");
+    font-size: utilities.font-size("font-size-16");
+    font-weight: utilities.font-weight("regular");
+    line-height: 100%;
+  }
+  @include media-breakpoint-down(lg) {
+    margin-top: 83px;
+    margin-bottom: 102px;
+    &__wrapper {
+      max-width: 291px;
+    }
+    &__title {
+      font-size: utilities.font-size("font-size-24");
+      width: 291px;
+    }
+    &__input {
+      width: 207px;
+    }
+    &__subscribe-btn {
+      display: none;
+    }
+    &__confirm-wrapper {
+      align-items: flex-start;
+    }
+  }
+}
