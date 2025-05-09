@@ -1,0 +1,74 @@
+@use "../../variables/utilities" as utilities;
+@use "bootstrap/scss/bootstrap" as *;
+.find-your-choice {
+  display: flex;
+  justify-content: center;
+}
+.products {
+  position: absolute;
+  top: 494px;
+  &__wrapper {
+    display: flex;
+  }
+  &__card {
+    width: 315px !important;
+    height: 281px !important;
+  }
+  &__image-wrapper {
+    width: 315px;
+    height: 281px;
+  }
+  &__product {
+    position: relative;
+  }
+  &__logo {
+    position: absolute;
+    bottom: 0px;
+    left: 18px;
+  }
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+  }
+  &__old-price {
+    text-decoration: line-through;
+    color: utilities.pantone("Cool-grey");
+    font-weight: utilities.font-weight("bold");
+    font-size: utilities.font-size("font-size-16");
+  }
+  &__like {
+    position: absolute;
+    top: 25px;
+    right: 33px;
+    font-size: utilities.font-size("font-size-28");
+  }
+  &__content {
+    padding: 12px 24px 0px 24px;
+    margin-top: -17px;
+  }
+
+  &__content-title {
+    font-family: utilities.font-family("default");
+    font-size: utilities.font-size("font-size-20");
+    font-weight: utilities.font-weight("bold");
+    color: utilities.color("Quaternary");
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 120%;
+  }
+  &__price {
+    display: flex;
+    gap: 12px;
+    margin-top: 2px;
+    font-size: utilities.font-size("font-size-18");
+    font-weight: utilities.font-weight("bold");
+    line-height: 120%;
+    color: utilities.color("Quaternary");
+    margin-bottom: 0;
+  }
+  &__discount {
+    color: utilities.pantone("Cardinal-red");
+  }
+}

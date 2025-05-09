@@ -1,6 +1,7 @@
 @use "../../variables/utilities" as utilities;
 @use "bootstrap/scss/bootstrap" as *;
 .store {
+  position: relative;
   &__wrapper {
     display: flex;
     justify-content: space-between;
@@ -27,11 +28,19 @@
     line-height: 135%;
     margin-bottom: 48px;
     max-width: 626px;
+    &_primary {
+      margin-bottom: 20px;
+    }
   }
   &__content-wrap {
     width: 100%;
     height: 100%;
     padding: 128px 78px;
+    &_primary {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
   }
   &__button {
     padding: 12px 24px;
@@ -43,6 +52,11 @@
     display: flex;
     align-items: center;
     gap: 12px;
+    &_primary {
+      border: transparent;
+      font-size: utilities.font-size("font-size-16");
+      padding: 0;
+    }
   }
   &__location {
     display: none;
