@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
-  new Swiper(".brand-swiper", {
+  const swiper = new Swiper(".brand-swiper", {
     modules: [Autoplay],
     loop: true,
     slidesPerView: "auto",
@@ -30,5 +30,13 @@ document.addEventListener("DOMContentLoaded", function () {
       delay: 0,
       disableOnInteraction: false,
     },
+  });
+
+  const swiperEl = document.querySelector(".brand-swiper");
+  swiperEl.addEventListener("mouseenter", () => {
+    swiper.autoplay.stop();
+  });
+  swiperEl.addEventListener("mouseleave", () => {
+    swiper.autoplay.start();
   });
 });
