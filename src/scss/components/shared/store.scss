@@ -1,10 +1,10 @@
 @use "../../variables/utilities" as utilities;
 @use "bootstrap/scss/bootstrap" as *;
 .store {
-  position: relative;
   &__wrapper {
     display: flex;
     justify-content: space-between;
+    position: relative;
   }
   &__section {
     background-color: utilities.pantone("Light-gray");
