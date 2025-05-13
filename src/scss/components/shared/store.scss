@@ -113,4 +113,15 @@
       padding: 41px 35px;
     }
   }
+  @include media-breakpoint-down(sm) {
+    &__section {
+      width: 100%;
+      &:first-child {
+        order: 1;
+      }
+      &:last-child {
+        order: 2;
+      }
+    }
+  }
 }
