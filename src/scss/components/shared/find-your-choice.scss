@@ -3,25 +3,25 @@
 .find-your-choice {
   display: flex;
   justify-content: center;
-  padding-bottom: 314px;
+  padding-bottom: 116px;
 }
 .products {
-  position: absolute;
-  left: 0;
-  right: 0;
+  position: relative;
   z-index: 10;
   margin: 0 auto;
-  transform: translateY(-50%);
+  bottom: 143px;
   pointer-events: auto;
+  max-width: 1368px;
   width: 100%;
+  overflow: hidden;
   &__wrapper {
     display: flex;
-    max-width: 1384px;
-    overflow: hidden;
+    width: max-content;
   }
   &__card {
     width: 315px !important;
-    height: 281px !important;
+    height: auto !important;
+    flex-shrink: 0;
   }
   &__image-wrapper {
     width: 315px;
@@ -79,5 +79,8 @@
   }
   &__discount {
     color: utilities.pantone("Cardinal-red");
+  }
+  @include media-breakpoint-down(md) {
+    padding-bottom: 55px;
   }
 }

@@ -9,6 +9,16 @@
   &__section {
     background-color: utilities.pantone("Light-gray");
     width: 50%;
+    &_primary {
+      width: 100%;
+      &:first-child {
+        order: 2;
+      }
+
+      &:last-child {
+        order: 1;
+      }
+    }
   }
   &__title {
     font-family: utilities.font-family("default");
