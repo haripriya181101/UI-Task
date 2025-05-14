@@ -32,6 +32,18 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
+  new Swiper(".offers-swiper", {
+    modules: [Autoplay],
+    loop: true,
+    slidesPerView: "auto",
+    spaceBetween: 36,
+    speed: 1000,
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+    },
+  });
+
   const swiperEl = document.querySelector(".brand-swiper");
   swiperEl.addEventListener("mouseenter", () => {
     swiper.autoplay.stop();

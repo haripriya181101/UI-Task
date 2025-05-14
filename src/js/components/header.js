@@ -4,11 +4,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const mobileMenu = document.getElementById("mobileMenu");
   const header = document.querySelector(".header");
 
+  const handleStickyHeader = () => {
+    if (window.scrollY > 10) {
+      header.classList.add("is-sticky");
+    } else {
+      header.classList.remove("is-sticky");
+    }
+  };
+
   if (hamburgerBtn && closeBtn && mobileMenu && header) {
     hamburgerBtn.addEventListener("click", () => {
       mobileMenu.classList.add("active");
       header.classList.add("menu-open");
-
       hamburgerBtn.style.display = "none";
       closeBtn.style.display = "inline";
     });
@@ -16,17 +23,11 @@ document.addEventListener("DOMContentLoaded", () => {
     closeBtn.addEventListener("click", () => {
       mobileMenu.classList.remove("active");
       header.classList.remove("menu-open");
-
       closeBtn.style.display = "none";
       hamburgerBtn.style.display = "inline";
     });
 
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 0) {
-        header.classList.add("is-sticky");
-      } else {
-        header.classList.remove("is-sticky");
-      }
-    });
+    window.addEventListener("scroll", handleStickyHeader);
+    handleStickyHeader();
   }
 });

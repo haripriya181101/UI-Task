@@ -36,4 +36,11 @@
     align-items: center;
     justify-content: center;
   }
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 88px;
+    &__brand-name {
+      width: 136px !important;
+      height: 58px !important;
+    }
+  }
 }
