@@ -138,26 +138,49 @@
       font-size: utilities.font-size("font-size-48");
       margin-top: 24px;
     }
+
     &__content {
       width: 324px;
       font-size: utilities.font-size("font-size-16");
     }
+
     &__adidas {
       width: 37px;
       height: 13px;
     }
+
     &__button {
       margin-top: 24px;
     }
+
     &__desc {
       padding: 0 24px;
       bottom: 143px;
     }
-    .swiper-pagination {
-      margin-bottom: 50px;
+
+    .swiper-pagination-bullet {
+      display: none !important;
+       padding: 0px 24px !important;
     }
-    .swiper-pagination-bullet-active {
+
+    .swiper-pagination {
+      position: absolute;
+      bottom: 80px;
+      left: 24px;
+      right: 24px;
+      height: 4px;
+      background-color: rgba(255, 255, 255, 0.3);
+      border-radius: 2px;
+      overflow: hidden;
+     
+    }
+
+    .swiper-pagination-progressbar-fill {
       background-color: white;
+      height: 100%;
+      width: 0;
+      transition: width 0.3s;
     }
   }
+
 }

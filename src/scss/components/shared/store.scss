@@ -117,6 +117,9 @@
     }
   }
   @include media-breakpoint-down(sm) {
+      &__primary{
+    margin-top: 160px;
+  }
     &__section {
       width: 100%;
       &:first-child {
