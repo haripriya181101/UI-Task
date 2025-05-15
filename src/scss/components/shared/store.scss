@@ -12,11 +12,11 @@
     &_primary {
       width: 100%;
       &:first-child {
-        order: 2;
+        order: 1;
       }
 
       &:last-child {
-        order: 1;
+        order: 2;
       }
     }
   }
@@ -117,9 +117,9 @@
     }
   }
   @include media-breakpoint-down(sm) {
-      &__primary{
-    margin-top: 160px;
-  }
+    &__primary {
+      margin-top: 160px;
+    }
     &__section {
       width: 100%;
       &:first-child {
