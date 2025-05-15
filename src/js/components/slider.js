@@ -4,10 +4,15 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
-document.addEventListener("DOMContentLoaded", function () {
-  // Banner Swiper
-  new Swiper(".banner-swiper", {
-    modules: [Pagination, Autoplay],
+function isSmallScreen() {
+  return window.innerWidth <= 768;
+}
+
+let bannerSwiper;
+
+function initBannerSwiper() {
+  return new Swiper(".banner__swiper", {
+    modules: [Pagination, Autoplay, Navigation],
     slidesPerView: 1,
     loop: true,
     autoplay: {
@@ -15,12 +20,29 @@ document.addEventListener("DOMContentLoaded", function () {
       disableOnInteraction: false,
     },
     pagination: {
-      el: ".banner-swiper .swiper-pagination",
+      el: ".banner__swiper .swiper-pagination",
       clickable: true,
+      type: isSmallScreen() ? "progressbar" : "bullets",
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
   });
+}
 
-  const swiper = new Swiper(".brand-swiper", {
+document.addEventListener("DOMContentLoaded", () => {
+  bannerSwiper = initBannerSwiper();
+
+  window.addEventListener("resize", () => {
+    const expectedType = isSmallScreen() ? "progressbar" : "bullets";
+    if (bannerSwiper.params.pagination.type !== expectedType) {
+      bannerSwiper.destroy(true, true);
+      bannerSwiper = initBannerSwiper();
+    }
+  });
+
+  const brandSwiper = new Swiper(".brand-swiper", {
     modules: [Autoplay],
     loop: true,
     slidesPerView: "auto",
@@ -45,10 +67,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   const swiperEl = document.querySelector(".brand-swiper");
-  swiperEl.addEventListener("mouseenter", () => {
-    swiper.autoplay.stop();
-  });
-  swiperEl.addEventListener("mouseleave", () => {
-    swiper.autoplay.start();
-  });
+  swiperEl.addEventListener("mouseenter", () => brandSwiper.autoplay.stop());
+  swiperEl.addEventListener("mouseleave", () => brandSwiper.autoplay.start());
 });

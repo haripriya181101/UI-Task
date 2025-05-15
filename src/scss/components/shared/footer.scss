@@ -311,6 +311,7 @@
     &__title {
       cursor: pointer;
       position: relative;
+      font-size: utilities.font-size("font-size-18");
 
       &::after {
         position: absolute;

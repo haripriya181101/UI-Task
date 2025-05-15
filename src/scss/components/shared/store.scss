@@ -117,6 +117,9 @@
     }
   }
   @include media-breakpoint-down(sm) {
+      &__primary{
+    margin-top: 160px;
+  }
     &__section {
       width: 100%;
       &:first-child {
@@ -124,6 +127,14 @@
       }
       &:last-child {
         order: 2;
+      }
+      &_primary {
+        &:first-child {
+          order: 2;
+        }
+        &:last-child {
+          order: 1;
+        }
       }
     }
   }

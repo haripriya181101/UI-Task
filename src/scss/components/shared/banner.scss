@@ -7,12 +7,14 @@
   &__swiper {
     width: 100%;
     position: relative;
+    height: auto;
   }
 
   &__slider {
     img {
       width: 100%;
       object-fit: cover;
+      height: auto;
     }
   }
 
@@ -116,7 +118,6 @@
       right: -10px;
       top: auto;
     }
-
     @include media-breakpoint-down(md) {
       display: none;
     }
@@ -134,30 +135,44 @@
     }
   }
   @include media-breakpoint-down(md) {
+    min-height: 812px;
+    overflow: hidden;
     &__title {
       font-size: utilities.font-size("font-size-48");
       margin-top: 24px;
     }
+
     &__content {
       width: 324px;
       font-size: utilities.font-size("font-size-16");
     }
+
     &__adidas {
       width: 37px;
       height: 13px;
     }
+
     &__button {
       margin-top: 24px;
     }
+
     &__desc {
       padding: 0 24px;
       bottom: 143px;
     }
-    .swiper-pagination {
-      margin-bottom: 50px;
+
+    .banner__swiper .swiper-pagination.swiper-pagination-progressbar {
+      top: auto !important;
+      bottom: 50px !important;
+      width: calc(100% - 48px);
+      margin: 0 24px;
+      height: 2px;
+      background-color: rgba(255, 255, 255, 0.2);
+      z-index: 10;
     }
-    .swiper-pagination-bullet-active {
-      background-color: white;
+
+    .banner__swiper .swiper-pagination-progressbar-fill {
+      background-color: utilities.background("secondary");
     }
   }
 }

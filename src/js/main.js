@@ -4,3 +4,4 @@ import "../scss/style.scss";
 import "./components/header";
 import "./components/slider";
 import "./components/footer";
+import "./components/form";
