@@ -3,7 +3,6 @@
 .find-your-choice {
   display: flex;
   justify-content: center;
-  padding-bottom: 116px;
   @include media-breakpoint-down(md) {
     padding-bottom: 55px;
   }
