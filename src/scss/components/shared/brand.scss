@@ -4,6 +4,7 @@
   display: flex;
   justify-content: center;
   margin-bottom: 128px;
+  padding: 0px 15px;
   &__wrapper {
     width: 100%;
     overflow: hidden;
@@ -37,6 +38,7 @@
     justify-content: center;
   }
   @include media-breakpoint-down(sm) {
+    padding: 0px 24px;
     margin-bottom: 88px;
     &__brand-name {
       width: 136px !important;

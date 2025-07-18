@@ -7,25 +7,46 @@
   &__swiper {
     width: 100%;
     position: relative;
-    height: auto;
+    height: 100vh;
+    overflow: hidden;
   }
 
   &__slider {
+    position: relative;
+  }
+
+  &__image {
     img {
       width: 100%;
       object-fit: cover;
-      height: auto;
+      height: 100%;
     }
   }
-
   &__desc {
     position: absolute;
-    bottom: 200px;
-    left: 0;
     width: 100%;
     z-index: 1;
     color: white;
     padding: 0 100px;
+    top: calc(50% + 105.5px);
+    transform: translateY(-50%);
+
+    @media (max-width: 1199px) {
+      top: calc(50% + 123px);
+    }
+    @media (max-width: 991px) {
+      top: calc(50% + 93px);
+    }
+    @include media-breakpoint-down(md) {
+      top: auto;
+      bottom: 118px;
+      padding: 0 24px;
+      transform: none;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      align-items: flex-start;
+    }
   }
 
   &__title {
@@ -36,9 +57,13 @@
     margin: 0;
     line-height: 100%;
     margin-top: 52px;
-
+    @include media-breakpoint-down(xl) {
+      font-size: utilities.font-size("font-size-48");
+      margin-top: 24px;
+    }
     @include media-breakpoint-down(md) {
       font-size: utilities.font-size("font-size-40");
+      margin-top: 24px;
     }
   }
 
@@ -52,6 +77,7 @@
 
     @include media-breakpoint-down(md) {
       width: auto;
+      font-size: utilities.font-size("font-size-16");
     }
   }
 
@@ -67,10 +93,23 @@
     gap: 8px;
     padding: 10px 22px;
     margin-top: 52px;
+
+    @include media-breakpoint-down(xl) {
+      margin-top: 24px;
+    }
+
+    @include media-breakpoint-down(md) {
+      margin-top: 24px;
+    }
   }
 
   &__adidas {
     margin: 0;
+
+    @include media-breakpoint-down(md) {
+      width: 37px;
+      height: 13px;
+    }
   }
 
   .swiper-pagination-bullet {
@@ -118,48 +157,15 @@
       right: -10px;
       top: auto;
     }
+
     @include media-breakpoint-down(md) {
       display: none;
     }
   }
-  @include media-breakpoint-down(xl) {
-    &__title {
-      font-size: utilities.font-size("font-size-48");
-      margin-top: 24px;
-    }
-    &__desc {
-      bottom: 24px;
-    }
-    &__button {
-      margin-top: 24px;
-    }
-  }
+
   @include media-breakpoint-down(md) {
     min-height: 812px;
     overflow: hidden;
-    &__title {
-      font-size: utilities.font-size("font-size-48");
-      margin-top: 24px;
-    }
-
-    &__content {
-      width: 324px;
-      font-size: utilities.font-size("font-size-16");
-    }
-
-    &__adidas {
-      width: 37px;
-      height: 13px;
-    }
-
-    &__button {
-      margin-top: 24px;
-    }
-
-    &__desc {
-      padding: 0 24px;
-      bottom: 143px;
-    }
 
     .banner__swiper .swiper-pagination.swiper-pagination-progressbar {
       top: auto !important;
