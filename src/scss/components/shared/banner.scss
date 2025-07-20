@@ -27,7 +27,6 @@
     width: 100%;
     z-index: 1;
     color: white;
-    padding: 0 100px;
     top: calc(50% + 105.5px);
     transform: translateY(-50%);
 
@@ -144,7 +143,7 @@
   .swiper-nav-vertical {
     position: absolute;
     right: 100px;
-    top: 56%;
+    top: 60%;
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
@@ -164,7 +163,6 @@
   }
 
   @include media-breakpoint-down(md) {
-    min-height: 812px;
     overflow: hidden;
 
     .banner__swiper .swiper-pagination.swiper-pagination-progressbar {

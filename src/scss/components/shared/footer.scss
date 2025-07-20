@@ -2,21 +2,17 @@
 @use "bootstrap/scss/bootstrap" as *;
 
 .footer {
+  background-color: utilities.background("Quaternary");
+  padding: 62px 152px 80px 152px;
   &__wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    gap: 176px;
-    justify-content: center;
-    padding: 43px 167px 80px 164px;
-    background-color: utilities.background("Quaternary");
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 32px;
   }
 
   &__title {
     position: relative;
-    color: utilities.color("primary");
-    font-weight: utilities.font-weight("bold");
-    font-family: utilities.font-family("default");
-    font-size: utilities.font-size("font-size-20");
     text-transform: uppercase;
     margin: 0;
     padding-bottom: 16px;
@@ -42,6 +38,13 @@
         display: none;
       }
     }
+    a {
+      color: utilities.color("primary");
+      font-weight: utilities.font-weight("bold");
+      font-family: utilities.font-family("default");
+      font-size: utilities.font-size("font-size-20");
+      text-decoration: none;
+    }
   }
   &__title-wrap {
     &::after {
@@ -52,6 +55,7 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    flex: 1 1 220px;
   }
   &__inner-list {
     margin: 0;
@@ -68,11 +72,18 @@
     font-weight: utilities.font-weight("regular");
     font-family: utilities.font-family("default");
     font-size: utilities.font-size("font-size-16");
-    width: 304px;
     color: utilities.color("primary");
     line-height: 100%;
     padding-top: 28px;
     margin: 0;
+    width: 304px;
+    a {
+      font-weight: utilities.font-weight("regular");
+      font-family: utilities.font-family("default");
+      font-size: utilities.font-size("font-size-16");
+      color: utilities.color("primary");
+      text-decoration: none;
+    }
     &_link {
       width: 0;
     }
@@ -99,11 +110,20 @@
   }
 
   &__email {
-    font-weight: utilities.font-weight("bold");
-    font-family: utilities.font-family("default");
-    font-size: utilities.font-size("font-size-16");
-    line-height: 120%;
-    color: utilities.color("primary");
+     font-weight: utilities.font-weight("bold");
+      font-family: utilities.font-family("default");
+      font-size: utilities.font-size("font-size-16");
+      line-height: 120%;
+      color: utilities.color("primary");
+      text-decoration: none;
+    a {
+      font-weight: utilities.font-weight("bold");
+      font-family: utilities.font-family("default");
+      font-size: utilities.font-size("font-size-16");
+      line-height: 120%;
+      color: utilities.color("primary");
+       text-decoration: none;
+    }
   }
 
   &__timing {
@@ -148,11 +168,14 @@
     gap: 12px;
   }
   &__change-desc {
-    font-weight: utilities.font-weight("regular");
-    font-family: utilities.font-family("default");
-    font-size: utilities.font-size("font-size-16");
-    color: utilities.color("primary");
-    line-height: 100%;
+    a {
+      font-weight: utilities.font-weight("regular");
+      font-family: utilities.font-family("default");
+      font-size: utilities.font-size("font-size-16");
+      color: utilities.color("primary");
+      line-height: 100%;
+      text-decoration: none;
+    }
   }
   &__button {
     background-color: utilities.pantone("Charcoal-grey");
@@ -231,6 +254,7 @@
     display: flex;
     justify-content: space-between;
     padding: 13px 153px 45px 160px;
+    background-color: white;
   }
   &__bottom-list {
     display: flex;
@@ -252,26 +276,23 @@
     letter-spacing: -1.1%;
     margin: 0;
   }
+  @include media-breakpoint-down(xxl) {
+    padding: 62px 120px 80px 120px;
+    &__list {
+      flex: none;
+    }
+  }
   @include media-breakpoint-down(xl) {
+    &__list {
+      flex: none;
+    }
+  }
+  @include media-breakpoint-down(lg) {
     &__wrapper {
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: auto auto;
-
-      & > :nth-child(3) {
-        grid-column: 1 / -1;
-      }
+      justify-content: center;
     }
   }
   @include media-breakpoint-down(md) {
-    &__wrapper {
-      grid-template-columns: 1fr;
-      gap: 8px;
-      padding: 40px 24px;
-
-      & > :nth-child(3) {
-        grid-column: auto;
-      }
-    }
     &__title {
       padding-top: 37px;
       &::after {
@@ -281,6 +302,9 @@
     &__responsive-dropdown {
       display: block;
       margin-top: 23px;
+    }
+    &__list {
+      flex: 1 1 220px;
     }
     &__section {
       .footer__inner-list {

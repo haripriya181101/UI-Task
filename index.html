@@ -9,8 +9,8 @@
 </head>
 
 <body>
-    <div>
         <header class="header">
+             <div class="generic-container">
             <div class="header__topbar header__topbar_info">
                 <div class="header__store-info">
                     <a href="#"><span class="icon-truck"></span>
@@ -25,7 +25,7 @@
                         <span>Devoluciones hasta 60 días</span></a>
                 </div>
             </div>
-
+           
             <div class="header__mobile">
                 <div class="header__mobile-top">
                     <div class="header__hamburger-container">
@@ -128,6 +128,7 @@
                     </div>
                 </div>
             </div>
+             </div>
         </header>
         <section class="banner">
             <div class="banner-swiper banner__swiper">
@@ -139,6 +140,7 @@
                             <source media="(max-width: 768px)" srcset="./src/images/hero-responsive.png" />
                             <img src="./src/images/hero.png" alt="Slide 1" />
                         </picture>
+                          <div class="generic-container">
                         <div class="banner__desc">
                             <figure class="banner__adidas">
                                 <picture>
@@ -157,6 +159,7 @@
                                 <span class="icon-right-arrow"></span><span> HOMBRE</span>
                             </button>
                         </div>
+                        </div>
                     </div>
 
 
@@ -165,6 +168,7 @@
                             <source media="(max-width: 768px)" srcset="./src/images/nike.jpg" />
                             <img src="./src/images/nike.jpg" alt="Slide 2" />
                         </picture>
+                        <div class="generic-container">
                         <div class="banner__desc">
                             <figure class="banner__adidas">
                                 <picture>
@@ -184,6 +188,7 @@
                                 <span class="icon-right-arrow"></span><span> HOMBRE</span>
                             </button>
                         </div>
+                        </div>
                     </div>
 
 
@@ -192,6 +197,7 @@
                             <source media="(max-width: 768px)" srcset="./src/images/puma.jpg" />
                             <img src="./src/images/puma.jpg" alt="Slide 3" />
                         </picture>
+                         <div class="generic-container">
                         <div class="banner__desc">
                             <figure class="banner__adidas">
                                 <picture>
@@ -209,6 +215,7 @@
                             <button class="banner__button">
                                 <span class="icon-right-arrow"></span><span> HOMBRE</span>
                             </button>
+                        </div>
                         </div>
                     </div>
 
@@ -1146,9 +1153,9 @@
             </section>
         </div>
         <section class="store store__primary">
-            <div class="store__wrapper">
-                <div class="store__section store__section_primary">
-                    <div class="store__content-wrap">
+            <div class="store__wrapper store__wrapper_primary">
+                <div class="store__section store__section_primary store__section_tertiary">
+                    <div class="store__content-wrap store__content-wrap_primary">
                         <h3 class="store__title">Más de 300 tiendas en españa, encuentra la más cercana</h3>
                         <p class="store__content">Lorem ipsum dolor sit amet, consectetur adipiscing elit vitae pharetra
                             nec
@@ -1199,11 +1206,12 @@
             </div>
         </section>
         <footer class="footer">
+              <div class="generic-container">
             <div class="footer__wrapper">
                 <ul class="footer__list">
                     <li class="footer__section dropdown">
                         <div class="footer__title-wrap">
-                            <h5 class="footer__title dropdown__toggle">¿Necesitas ayuda?</h5>
+                            <h5 class="footer__title dropdown__toggle"><a href="#">¿Necesitas ayuda?</a></h5>
                             <figure class="footer__responsive-dropdown">
                                 <img src="./src/images/responsive-dropdown.png" alt="">
                             </figure>
@@ -1212,24 +1220,26 @@
                         <ul class="footer__inner-list">
                             <li>
                                 <p class="footer__desc">
-                                    Estamos a tu disposición para ayudarte en tu compra online
+                                    <a href="#">Estamos a tu disposición para ayudarte en tu compra online</a>
                                 </p>
                             </li>
                             <li class="footer__mail-wrap">
                                 <span class="icon-mail footer__mail-icon"></span>
-                                <h5 class="footer__email">937 970 248</h5>
+                                <a href="tel:+34937970248"  class="footer__email">937 970 248</a>
                             </li>
                             <li class="footer__mail-wrap">
                                 <span class="icon-mail footer__mail-icon"></span>
-                                <h5 class="footer__email">atencionalcliente@base.net</h5>
+                               <a href="mailto:atencionalcliente@base.net" class="footer__email">atencionalcliente@base.net</a>
                             </li>
                             <li>
                                 <p class="footer__timing">Lunes - sábado de 10:00 - 20:00</p>
                             </li>
                             <li>
                                 <p class="footer__desc">
-                                    Para información comercial, envía un email a
+                                   <a href="#">
+                                     Para información comercial, envía un email a
                                     movimeintosbase@base.net
+                                   </a>
                                 </p>
                             </li>
                         </ul>
@@ -1237,7 +1247,7 @@
 
                     <li class="footer__section dropdown">
                         <div class="footer__title-wrap">
-                            <h5 class="footer__title dropdown__toggle">Sobre Base</h5>
+                            <h5 class="footer__title dropdown__toggle"><a href="#">Sobre Base</a></h5>
                             <figure class="footer__responsive-dropdown">
                                 <img src="./src/images/responsive-dropdown.png" alt="">
                             </figure>
@@ -1245,10 +1255,10 @@
 
                         <ul class="footer__inner-list">
                             <li>
-                                <p class="footer__desc">Sobre nosotros</p>
+                                <p class="footer__desc"><a href="#">Sobre nosotros</a></p>
                             </li>
                             <li>
-                                <p class="footer__desc">Trabaja con nosotros</p>
+                                <p class="footer__desc"><a href="#">Trabaja con nosotros</a></p>
                             </li>
                             <li>
                                 <p class="footer__social-wrap">
@@ -1262,7 +1272,7 @@
                 <ul class="footer__list">
                     <li class="footer__section dropdown">
                         <div class="footer__title-wrap">
-                            <h5 class="footer__title dropdown__toggle">Atención al cliente</h5>
+                            <h5 class="footer__title dropdown__toggle"><a href="#">Atención al cliente</a></h5>
                             <figure class="footer__responsive-dropdown">
                                 <img src="./src/images/responsive-dropdown.png" alt="">
                             </figure>
@@ -1270,29 +1280,29 @@
 
                         <ul class="footer__inner-list">
                             <li>
-                                <p class="footer__desc">Preguntas frecuentes</p>
+                                <p class="footer__desc"><a href="#">Preguntas frecuentes</a></p>
                             </li>
                             <li>
-                                <p class="footer__desc">Envíos</p>
+                                <p class="footer__desc"><a href="#">Envíos</a></p>
                             </li>
                             <li>
-                                <p class="footer__desc">Devoluciones</p>
+                                <p class="footer__desc"><a href="#">Devoluciones</a></p>
                             </li>
                             <li>
-                                <p class="footer__desc">Seguimiento del pedido</p>
+                                <p class="footer__desc"><a href="#">Seguimiento del pedido</a></p>
                             </li>
                             <li>
-                                <p class="footer__desc">Condiciones de uso</p>
+                                <p class="footer__desc"><a href="#">Condiciones de uso</a></p>
                             </li>
                             <li>
-                                <p class="footer__desc">Contacto</p>
+                                <p class="footer__desc"><a href="#">Contacto</a></p>
                             </li>
                         </ul>
                     </li>
 
                     <li class="footer__section dropdown">
                         <div class="footer__title-wrap">
-                            <h5 class="footer__title dropdown__toggle">ESTAS COMPRANDO EN</h5>
+                            <h5 class="footer__title dropdown__toggle"><a href="#">ESTAS COMPRANDO EN</a></h5>
                             <figure class="footer__responsive-dropdown">
                                 <img src="./src/images/responsive-dropdown.png" alt="">
                             </figure>
@@ -1303,10 +1313,10 @@
                                 <div class="footer__location">
                                     <p class="footer__location-wrap">
                                         <span class="icon-location2 footer__location-icon"></span>
-                                        <span class="footer__email">PENINSULA</span>
+                                        <span class="footer__email"><a href="#">PENINSULA</a></span>
                                     </p>
                                     <div class="footer__change">
-                                        <span class="footer__change-desc">Cambiar</span>
+                                        <span class="footer__change-desc"><a href="#">Cambiar</a></span>
                                         <figure class="footer__dropdown">
                                             <picture>
                                                 <source media="(max-width: 768px)"
@@ -1329,7 +1339,7 @@
                 <ul class="footer__list">
                     <li class="footer__section dropdown">
                         <div class="footer__title-wrap">
-                            <h5 class="footer__title dropdown__toggle">Pago seguro</h5>
+                            <h5 class="footer__title dropdown__toggle"><a href="#">Pago seguro</a></h5>
                             <figure class="footer__responsive-dropdown">
                                 <img src="./src/images/responsive-dropdown.png" alt="">
                             </figure>
@@ -1342,7 +1352,7 @@
 
                     <li class="footer__section dropdown">
                         <div class="footer__title-wrap">
-                            <h5 class="footer__title dropdown__toggle">Metodos de pago</h5>
+                            <h5 class="footer__title dropdown__toggle"><a href="#">Metodos de pago</a></h5>
                             <figure class="footer__responsive-dropdown">
                                 <img src="./src/images/responsive-dropdown.png" alt="">
                             </figure>
@@ -1353,7 +1363,7 @@
                                     <img src="./src/images/payment.png" alt="" />
                                 </figure>
                             </li>
-                            <li class="footer__desc footer__desc_primary">ESTAS BUSCANDO EN</li>
+                            <li class="footer__desc footer__desc_primary"><a href="#">ESTAS BUSCANDO EN</a></li>
                             <li>
                                 <div class="footer__location footer__location_primary">
                                     <p class="footer__location-wrap">
@@ -1379,8 +1389,9 @@
                                 </button>
                             </li>
                             <li>
-                                <h5 class="footer__title footer__title_casual dropdown__toggle">Descubre nuestra web
-                                    exclusiva de casual</h5>
+                                <h5 class="footer__title footer__title_casual dropdown__toggle">
+                                   <a href="#"> Descubre nuestra web
+                                    exclusiva de casual</a></h5>
                             </li>
                             <li>
                                 <figure class="footer__sticker-wrapper">
@@ -1391,7 +1402,12 @@
                     </li>
                 </ul>
             </div>
-            <div class="footer__bottom">
+            </div>
+           
+            
+        </footer>
+         <div class="footer__bottom">
+                
                 <ul class="footer__bottom-list">
                     <li>Política de privacidad</li>
                     <li>Política de cookies</li>
@@ -1399,10 +1415,8 @@
                     <li>Formulario de desistimiento</li>
                 </ul>
                 <p class="footer__copy-right">@ Base 2021. Todos los derechos reservados</p>
+             
             </div>
-        </footer>
-    </div>
     <script type="module" src="./src/js/main.js"></script>
 </body>
-
 </html>

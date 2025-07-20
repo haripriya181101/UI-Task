@@ -38,12 +38,16 @@
     justify-content: center;
   }
   @include media-breakpoint-down(sm) {
-    padding: 0px 24px;
+    padding: 0;
     margin-bottom: 88px;
     &__brand-name {
       width: 136px !important;
       height: 58px !important;
     }
+      &__title {
+        margin-top: 66px;
+        margin-bottom: 24px;
+      }
     &__image {
       width: 37px;
       img {

@@ -7,7 +7,6 @@
   left: 0;
   width: 100%;
   z-index: 1000;
-  padding: 0px 114px;
   background-color: transparent;
   transition: background-color 0.3s, box-shadow 0.3s;
   &.is-sticky {
@@ -288,7 +287,6 @@
     display: none;
   }
   @include media-breakpoint-down(xl) {
-    padding: 0px 24px;
     &__topbar_menu {
       display: flex;
       flex-direction: column;
@@ -299,7 +297,7 @@
     }
   }
   @include media-breakpoint-down(lg) {
-    padding: 16px 16px 16px 22px;
+    padding: 24px 0px;
     &.menu-open {
       background-color: utilities.background("secondary");
 
