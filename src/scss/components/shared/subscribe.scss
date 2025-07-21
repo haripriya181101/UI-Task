@@ -76,6 +76,23 @@
   @include media-breakpoint-down(lg) {
     margin-top: 83px;
     margin-bottom: 102px;
+    &__input {
+      width: 207px;
+    }
+    &__input-wrapper{
+      justify-content: center;
+    }
+    &__subscribe-btn {
+      display: none;
+    }
+    &__confirm-wrapper {
+      align-items: flex-start;
+      justify-content: center;
+    }
+  }
+    @include media-breakpoint-down(md) {
+    margin-top: 83px;
+    margin-bottom: 102px;
     &__wrapper {
       max-width: 291px;
     }

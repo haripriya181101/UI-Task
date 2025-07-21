@@ -1,8 +1,11 @@
 .generic-container {
   max-width: 1368px;
   width: 100%;
-  padding-left: 15px;
-  padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 24px;
+
+  @media (max-width: 768px) {
+    padding: 0 24px;
+  }
 }
