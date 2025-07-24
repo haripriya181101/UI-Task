@@ -13,7 +13,6 @@
 
   &__title {
     position: relative;
-    text-transform: uppercase;
     margin: 0;
     padding-bottom: 16px;
     padding-top: 19px;
@@ -110,19 +109,19 @@
   }
 
   &__email {
-     font-weight: utilities.font-weight("bold");
-      font-family: utilities.font-family("default");
-      font-size: utilities.font-size("font-size-16");
-      line-height: 120%;
-      color: utilities.color("primary");
-      text-decoration: none;
+    font-weight: utilities.font-weight("bold");
+    font-family: utilities.font-family("default");
+    font-size: utilities.font-size("font-size-16");
+    line-height: 120%;
+    color: utilities.color("primary");
+    text-decoration: none;
     a {
       font-weight: utilities.font-weight("bold");
       font-family: utilities.font-family("default");
       font-size: utilities.font-size("font-size-16");
       line-height: 120%;
       color: utilities.color("primary");
-       text-decoration: none;
+      text-decoration: none;
     }
   }
 

@@ -55,6 +55,14 @@
         }
       }
     }
+    .header__selected-item {
+      background-color: utilities.pantone("Dark-slate-blue");
+      color: white !important;
+    }
+  }
+  &__selected-item {
+    background-color: utilities.color("primary");
+    color: utilities.pantone("Dark-slate-blue") !important;
   }
   &__topbar {
     display: flex;
@@ -289,7 +297,6 @@
   @include media-breakpoint-down(xl) {
     &__topbar_menu {
       display: flex;
-      flex-direction: column;
       gap: 16px;
     }
     &__topbar {
