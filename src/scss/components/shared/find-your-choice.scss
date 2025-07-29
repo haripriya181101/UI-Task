@@ -317,3 +317,13 @@
   display: flex;
   justify-content: center;
 }
+.find-your-choice .generic-container {
+  padding-right: 0;
+}
+@include media-breakpoint-down(sm) {
+  .find-your-choice {
+    .generic-container {
+      padding-right: 8px !important;
+    }
+  }
+}

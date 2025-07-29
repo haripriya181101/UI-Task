@@ -289,7 +289,7 @@
   @include media-breakpoint-down(lg) {
     &__wrapper {
       justify-content: center;
-      column-gap: 32px;
+      column-gap: 32pxk;
     }
   }
   @include media-breakpoint-down(md) {

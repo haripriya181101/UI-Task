@@ -44,10 +44,10 @@
       width: 136px !important;
       height: 58px !important;
     }
-      &__title {
-        margin-top: 66px;
-        margin-bottom: 24px;
-      }
+    &__title {
+      margin-top: 66px;
+      margin-bottom: 24px;
+    }
     &__image {
       width: 37px;
       img {
@@ -55,6 +55,13 @@
         height: 100%;
         object-fit: cover;
       }
+    }
+  }
+}
+@include media-breakpoint-down(sm) {
+  .brand {
+    .generic-container {
+      padding-right: 0 !important;
     }
   }
 }
