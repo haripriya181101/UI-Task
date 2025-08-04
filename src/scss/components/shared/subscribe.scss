@@ -9,7 +9,7 @@
     max-width: 743px;
   }
   &__title {
-    font-family: utilities.font-family("default");
+    font-family: utilities.font-family("secondary");
     color: utilities.color("Quaternary");
     font-size: utilities.font-size("font-size-28");
     font-weight: utilities.font-weight("bold");
@@ -39,11 +39,14 @@
     margin-bottom: 20px;
   }
   &__subscribe-btn {
+    font-family: utilities.font-family("secondary");
     font-size: utilities.font-size("font-size-18");
     font-weight: utilities.font-weight("bold");
     text-transform: uppercase;
     color: utilities.color("primary");
     line-height: 120%;
+    display: flex;
+    align-items: center;
   }
   &__arrow {
     color: utilities.color("primary");
@@ -61,7 +64,7 @@
     margin-top: 20px;
   }
   &__confirmation {
-    font-family: utilities.font-family("default");
+    font-family: utilities.font-family("secondary");
     color: utilities.color("Quaternary");
     font-size: utilities.font-size("font-size-16");
     font-weight: utilities.font-weight("regular");
@@ -79,7 +82,7 @@
     &__input {
       width: 207px;
     }
-    &__input-wrapper{
+    &__input-wrapper {
       justify-content: center;
     }
     &__subscribe-btn {
@@ -90,7 +93,7 @@
       justify-content: center;
     }
   }
-    @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(md) {
     margin-top: 83px;
     margin-bottom: 102px;
     &__wrapper {

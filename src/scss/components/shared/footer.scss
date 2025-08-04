@@ -40,7 +40,7 @@
     a {
       color: utilities.color("primary");
       font-weight: utilities.font-weight("bold");
-      font-family: utilities.font-family("default");
+      font-family: utilities.font-family("secondary");
       font-size: utilities.font-size("font-size-20");
       text-decoration: none;
     }
@@ -69,7 +69,7 @@
 
   &__desc {
     font-weight: utilities.font-weight("regular");
-    font-family: utilities.font-family("default");
+    font-family: utilities.font-family("secondary");
     font-size: utilities.font-size("font-size-16");
     color: utilities.color("primary");
     line-height: 100%;
@@ -78,7 +78,7 @@
     width: 304px;
     a {
       font-weight: utilities.font-weight("regular");
-      font-family: utilities.font-family("default");
+      font-family: utilities.font-family("secondary");
       font-size: utilities.font-size("font-size-16");
       color: utilities.color("primary");
       text-decoration: none;
@@ -110,14 +110,14 @@
 
   &__email {
     font-weight: utilities.font-weight("bold");
-    font-family: utilities.font-family("default");
+    font-family: utilities.font-family("secondary");
     font-size: utilities.font-size("font-size-16");
     line-height: 120%;
     color: utilities.color("primary");
     text-decoration: none;
     a {
       font-weight: utilities.font-weight("bold");
-      font-family: utilities.font-family("default");
+      font-family: utilities.font-family("secondary");
       font-size: utilities.font-size("font-size-16");
       line-height: 120%;
       color: utilities.color("primary");
@@ -169,7 +169,7 @@
   &__change-desc {
     a {
       font-weight: utilities.font-weight("regular");
-      font-family: utilities.font-family("default");
+      font-family: utilities.font-family("secondary");
       font-size: utilities.font-size("font-size-16");
       color: utilities.color("primary");
       line-height: 100%;
@@ -183,7 +183,7 @@
     padding: 13px 59px;
     font-weight: utilities.font-weight("bold");
     font-size: utilities.font-size("font-size-18");
-    font-family: utilities.font-family("default");
+    font-family: utilities.font-family("secondary");
     line-height: 100%;
     display: flex;
     gap: 12px;
@@ -262,7 +262,7 @@
     color: utilities.color("Quaternary");
     font-weight: utilities.font-weight("regular");
     font-size: utilities.font-size("font-size-14");
-    font-family: utilities.font-family("default");
+    font-family: utilities.font-family("secondary");
     letter-spacing: -1.1%;
     padding: 0;
     margin: 0;
@@ -271,7 +271,7 @@
     color: utilities.color("Quaternary");
     font-weight: utilities.font-weight("regular");
     font-size: utilities.font-size("font-size-14");
-    font-family: utilities.font-family("default");
+    font-family: utilities.font-family("secondary");
     letter-spacing: -1.1%;
     margin: 0;
   }

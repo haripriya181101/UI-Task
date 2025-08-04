@@ -8,17 +8,13 @@
 **/
 
 $font-family-basic: (
-  din-pro: (
-    "din-pro",
-  ),
-  titillium-web: (
-    "titillium-web",
+  open-sans: (
+    "open-sans",
   ),
 );
 
 $font-family: (
-  default: map-get($font-family-basic, din-pro),
-  primary: map-get($font-family-basic, titillium-web),
+  secondary: map-get($font-family-basic, open-sans),
 );
 
 $font-weight: (
