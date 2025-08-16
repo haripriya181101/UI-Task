@@ -83,6 +83,14 @@
         color:utilities.color("primary");
       }
     }
+    .header__selected-item {
+      background-color: utilities.pantone("Dark-slate-blue");
+      color: white !important;
+    }
+  }
+  &__selected-item {
+    background-color: utilities.color("primary");
+    color: utilities.pantone("Dark-slate-blue") !important;
   }
 
   &__topbar {
