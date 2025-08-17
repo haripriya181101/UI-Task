@@ -241,7 +241,10 @@
     color: utilities.color("primary");
     pointer-events: none;
   }
-
+ &__selected-item{
+  background-color: utilities.background("tertiary") !important;
+  color: utilities.color("primary") !important;
+ }
   &__mobile {
     display: none;
     flex-direction: column;
