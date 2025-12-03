@@ -8,13 +8,13 @@
 **/
 
 $font-family-basic: (
-  open-sans: (
-    "open-sans",
+  bricolage: (
+    "Bricolage",
   ),
 );
 
 $font-family: (
-  secondary: map-get($font-family-basic, open-sans),
+  primaryy: map-get($font-family-basic, bricolage),
 );
 
 $font-weight: (
