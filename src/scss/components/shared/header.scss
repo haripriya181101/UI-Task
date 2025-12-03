@@ -1,0 +1,62 @@
+@use "../../variables/utilities" as utilities;
+@use "bootstrap/scss/bootstrap" as *;
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+/* Header Block */
+.header {
+  background: #ffffff;
+  padding: 20px 0;
+  border-bottom: 1px solid #eaeaea;
+  width: 100%;
+}
+
+.header__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: center;
+}
+
+/* Menu Elements */
+.header__menu {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.header__item {
+}
+
+.header__link {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.header__link:hover {
+  color: #4CCBBB; /* Your color */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header__menu {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+
