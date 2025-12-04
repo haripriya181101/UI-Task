@@ -1,34 +1,32 @@
-// Bricolage Font family
-// Bricolage- font-weight : 400
 @font-face {
   font-family: "Bricolage";
-  src: url("/src/fonts/Bricolage/BricolageGrotesque_72pt-Regular.otf") format("truetype");
+  src: url("/src/fonts/Bricolage/BricolageGrotesque_72pt-Regular.otf")
+    format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
-// Bricolage - font-weight : 500
 @font-face {
   font-family: "Bricolage";
-  src: url("/src/fonts/Bricolage/BricolageGrotesque_72pt-Medium.otf") format("truetype");
+  src: url("/src/fonts/Bricolage/BricolageGrotesque_72pt-Medium.otf")
+    format("opentype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
-// Bricolage - font-weight : 600
 @font-face {
   font-family: "Bricolage";
-  src: url("/src/fonts/Bricolage/BricolageGrotesque_72pt-SemiBold.otf") format("truetype");
+  src: url("/src/fonts/Bricolage/BricolageGrotesque_72pt-SemiBold.otf")
+    format("opentype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
-// Bricolage - font-weight : 700
 @font-face {
   font-family: "Bricolage";
-  src: url("/src/fonts/Bricolage/BricolageGrotesque_72pt-Bold.otf") format("truetype");
+  src: url("/src/fonts/Bricolage/BricolageGrotesque_72pt-Bold.otf")
+    format("opentype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
-
