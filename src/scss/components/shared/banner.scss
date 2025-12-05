@@ -1,49 +1,32 @@
-@use "../../variables/utilities" as utilities;
 .banner {
-  width: 100%;
-  padding: 100px 20px;
-  background-color: utilities.background("primary");
+  position: relative;
+  padding: 120px 0;
   text-align: center;
-  color: #fff;
-  border-radius: 70px;
-  &__content {
-    max-width: 800px;
-    margin: 0 auto;
-  }
+  background-color: #fdf7f1;
+  overflow: hidden;
+}
 
-  &__title {
-    font-size: 48px;
-    font-weight: 700;
-    margin-bottom: 20px;
+.banner__decor {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 240px;
+  height: auto;
+  pointer-events: none;
+  user-select: none;
+}
 
-    @media (max-width: 768px) {
-      font-size: 32px;
-    }
-  }
+.banner__decor--left {
+  left: 0;
+}
 
-  &__subtitle {
-    font-size: 20px;
-    margin-bottom: 30px;
-    line-height: 1.6;
+.banner__decor--right {
+  right: 0;
+}
 
-    @media (max-width: 768px) {
-      font-size: 16px;
-      padding: 0 10px;
-    }
-  }
-
-  &__btn {
-    display: inline-block;
-    padding: 14px 28px;
-    background: #4ccbbb;
-    color: #fff;
-    border-radius: 6px;
-    font-size: 18px;
-    text-decoration: none;
-    transition: 0.3s ease;
-
-    &:hover {
-      background: darken(#4ccbbb, 8%);
-    }
+@media (max-width: 768px) {
+  .banner__decor {
+    width: 140px;
+    opacity: 0.4;
   }
 }
