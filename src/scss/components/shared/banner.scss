@@ -1,0 +1,49 @@
+@use "../../variables/utilities" as utilities;
+.banner {
+  width: 100%;
+  padding: 100px 20px;
+  background-color: utilities.background("primary");
+  text-align: center;
+  color: #fff;
+  border-radius: 70px;
+  &__content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+
+    @media (max-width: 768px) {
+      font-size: 32px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 20px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+      padding: 0 10px;
+    }
+  }
+
+  &__btn {
+    display: inline-block;
+    padding: 14px 28px;
+    background: #4ccbbb;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 18px;
+    text-decoration: none;
+    transition: 0.3s ease;
+
+    &:hover {
+      background: darken(#4ccbbb, 8%);
+    }
+  }
+}

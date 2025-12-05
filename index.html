@@ -3,13 +3,61 @@
 
 <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Solus</title>
 </head>
 
 <body>
-   <h1>hloooo</h1>
+    <header class="generic-container header" id="header">
+        <span class="icon-hamburger" id="hamburger"></span>
+
+        <nav class="header__nav">
+            <div class="header__section header__section--left">
+                <ul class="header__menu">
+                    <li><a class="header__link" href="#">Home</a></li>
+                    <li><a class="header__link" href="#">About</a></li>
+                    <li><a class="header__link" href="#">Services</a></li>
+                </ul>
+            </div>
+
+            <div class="header__section header__section--center">
+                <a class="header__link header__link--logo" href="#">Solus</a>
+            </div>
+
+            <div class="header__section header__section--right">
+                <ul class="header__menu">
+                    <li><a class="header__link" href="#">Therapists</a></li>
+                    <li><a class="header__link" href="#">Resources</a></li>
+                    <li><a class="header__link" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <aside class="sidebar" id="sidebar">
+        <span class="sidebar__close" id="closeSidebar">&times;</span>
+
+        <ul class="sidebar__menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Therapists</a></li>
+            <li><a href="#">Resources</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </aside>
+
+    <section class="generic-container">
+        <div class="banner">
+            <div class="banner__content">
+                <h1 class="banner__title">Find Your Path to Healing</h1>
+                <p class="banner__subtitle">
+                    Professional therapy and wellness guidance to support your mental wellbeing.
+                </p>
+                <a href="#" class="banner__btn">Get Started</a>
+            </div>
+        </div>
+    </section>
+
     <script type="module" src="./src/js/main.js"></script>
 </body>
 
