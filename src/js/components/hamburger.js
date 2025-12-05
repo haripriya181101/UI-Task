@@ -1,6 +1,11 @@
+const sidebar = document.getElementById("sidebar");
 const hamburger = document.getElementById("hamburger");
-const header = document.getElementById("header");
+const closeSidebar = document.getElementById("closeSidebar");
 
 hamburger.addEventListener("click", () => {
-  header.classList.toggle("menu-open");
+  sidebar.classList.add("open");
+});
+
+closeSidebar.addEventListener("click", () => {
+  sidebar.classList.remove("open");
 });
