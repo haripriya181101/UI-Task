@@ -1,32 +1,82 @@
+@use "../../variables/utilities" as utilities;
+
 .banner {
   position: relative;
   padding: 120px 0;
   text-align: center;
   background-color: #fdf7f1;
   overflow: hidden;
-}
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 70px;
 
-.banner__decor {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 240px;
-  height: auto;
-  pointer-events: none;
-  user-select: none;
-}
+  &__decor {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-23%);
+    width: 240px;
+    pointer-events: none;
+    user-select: none;
 
-.banner__decor--left {
-  left: 0;
-}
+    &--left {
+      left: 0;
+    }
 
-.banner__decor--right {
-  right: 0;
-}
+    &--right {
+      right: 0;
+    }
+  }
 
-@media (max-width: 768px) {
-  .banner__decor {
-    width: 140px;
-    opacity: 0.4;
+  &__content {
+    color: utilities.color("primary");
+    max-width: 640px;
+  }
+
+  &__title {
+    font-weight: utilities.font-weight("bold");
+    font-size: utilities.font-size("font-size-70");
+    font-family: utilities.font-family("primary");
+    line-height: 100%;
+    letter-spacing: 0.5px;
+  }
+
+  &__subtitle {
+    font-weight: utilities.font-weight("regular");
+    font-size: utilities.font-size("font-size-24");
+    font-family: utilities.font-family("primary");
+    letter-spacing: 0.5px;
+    margin-top: 15px;
+  }
+  &__btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: utilities.color("primary");
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 100px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+    margin-top: 45px;
+  }
+  @media (max-width: 768px) {
+    &__decor {
+      width: 118px;
+      transform: scale(1.5);
+    }
+    &__content {
+      max-width: 500px;
+    }
+    &__title {
+      font-size: utilities.font-size("font-size-40");
+      line-height: 110%;
+    }
+
+    &__subtitle {
+      font-size: utilities.font-size("font-size-18");
+    }
   }
 }
