@@ -4,7 +4,7 @@
   position: relative;
   padding: 120px 0;
   text-align: center;
-  background-color: #fdf7f1;
+  background-color: utilities.background("primary");
   overflow: hidden;
   display: flex;
   flex-direction: column;
