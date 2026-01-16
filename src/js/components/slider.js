@@ -2,71 +2,45 @@ import Swiper from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 
 function isSmallScreen() {
   return window.innerWidth <= 768;
 }
 
-let bannerSwiper;
+let testimonialsSwiper;
 
-function initBannerSwiper() {
-  return new Swiper(".banner__swiper", {
-    modules: [Pagination, Autoplay, Navigation],
-    slidesPerView: 1,
+function initTestimonialsSwiper() {
+  return new Swiper(".testimonials-swiper", {
+    modules: [Navigation, Autoplay],
+    slidesPerView: isSmallScreen() ? 1 : 1.5,
+    spaceBetween: 32,
     loop: true,
+    speed: 800,
     autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
+      delay: 800,
+      pauseOnMouseEnter: true,
     },
-    pagination: {
-      el: ".banner__swiper .swiper-pagination",
-      clickable: true,
-      type: isSmallScreen() ? "progressbar" : "bullets",
-    },
+
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".testimonials__nav--next",
+      prevEl: ".testimonials__nav--prev",
+    },
+
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 1.2,
+      },
+      1024: {
+        slidesPerView: 1.5,
+      },
     },
   });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  bannerSwiper = initBannerSwiper();
-
-  window.addEventListener("resize", () => {
-    const expectedType = isSmallScreen() ? "progressbar" : "bullets";
-    if (bannerSwiper.params.pagination.type !== expectedType) {
-      bannerSwiper.destroy(true, true);
-      bannerSwiper = initBannerSwiper();
-    }
-  });
-
-  const brandSwiper = new Swiper(".brand-swiper", {
-    modules: [Autoplay],
-    loop: true,
-    slidesPerView: "auto",
-    spaceBetween: 12,
-    speed: 1000,
-    autoplay: {
-      delay: 0,
-      disableOnInteraction: false,
-    },
-  });
-
-  new Swiper(".offers-swiper", {
-    modules: [Autoplay],
-    loop: true,
-    slidesPerView: "auto",
-    spaceBetween: 36,
-    speed: 3000,
-    autoplay: {
-      delay: 0,
-      disableOnInteraction: false,
-    },
-  });
-
-  const swiperEl = document.querySelector(".brand-swiper");
-  swiperEl.addEventListener("mouseenter", () => brandSwiper.autoplay.stop());
-  swiperEl.addEventListener("mouseleave", () => brandSwiper.autoplay.start());
+  testimonialsSwiper = initTestimonialsSwiper();
 });

@@ -176,11 +176,15 @@
     }
   }
 }
-
 @media (max-width: 500px) {
   .service-card {
+    padding: 32px;
     &__title {
-      font-size: utilities.font-size("font-size-28");
+      font-size: utilities.font-size("font-size-22");
+      margin-bottom: 15px;
+    }
+    &__text {
+      font-size: utilities.font-size("font-size-18");
     }
     &__image {
       display: none;
@@ -192,11 +196,14 @@
     }
   }
 }
-
 @media (max-width: 768px) {
   .services {
+    margin-top: 50px;
+    &__header {
+      margin-bottom: 15px;
+    }
     &__title {
-      font-size: utilities.font-size("font-size-32");
+      font-size: utilities.font-size("font-size-28");
     }
     &__grid {
       grid-template-columns: 1fr;
@@ -206,7 +213,14 @@
   .service-wide {
     flex-direction: column;
     padding: 48px 24px;
-
+    &__title {
+      font-size: utilities.font-size("font-size-28");
+      margin-bottom: 15px;
+    }
+    &__text {
+      margin-bottom: 15px;
+      font-size: utilities.font-size("font-size-18");
+    }
     &__image {
       position: static;
       transform: none;
@@ -216,6 +230,7 @@
       img {
         width: 100%;
         border-radius: 20px;
+        margin-left: 22px;
       }
     }
   }

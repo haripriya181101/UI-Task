@@ -66,8 +66,12 @@
   @media (max-width: 768px) {
     flex-direction: column-reverse;
     text-align: center;
+    margin-top: 50px;
     &__title {
-      font-size: utilities.font-size("font-size-32");
+      font-size: utilities.font-size("font-size-28");
+    }
+    &__subtitle {
+      font-size: utilities.font-size("font-size-18");
     }
     &__image {
       justify-content: center;

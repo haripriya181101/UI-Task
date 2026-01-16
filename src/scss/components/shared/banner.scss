@@ -19,7 +19,7 @@
     width: 240px;
     pointer-events: none;
     user-select: none;
-    animation: decorFloat 6s ease-in-out infinite;
+    animation: decorFloat 2s ease-in-out infinite;
 
     &--left {
       left: -13px;
@@ -95,7 +95,7 @@
 
   @media (max-width: 768px) {
     &__title {
-      font-size: utilities.font-size("font-size-32");
+      font-size: utilities.font-size("font-size-28");
     }
     &__subtitle {
       font-size: utilities.font-size("font-size-16");
@@ -107,6 +107,7 @@
 
     &__content {
       max-width: 500px;
+      padding: 0px 16px;
     }
 
     &__title {
@@ -116,6 +117,14 @@
 
     &__subtitle {
       font-size: utilities.font-size("font-size-18");
+    }
+  }
+  @media (max-width: 476px) {
+    &__title {
+      font-size: utilities.font-size("font-size-28");
+    }
+    &__subtitle {
+      font-size: utilities.font-size("font-size-16");
     }
   }
 }
