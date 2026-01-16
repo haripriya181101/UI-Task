@@ -1,0 +1,111 @@
+@use "../../variables/utilities" as utilities;
+.section-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 80px 0;
+  margin-top: 100px;
+
+  &__content {
+    flex: 1;
+    max-width: 600px;
+
+    & > * {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    font-weight: utilities.font-weight("bold");
+    color: utilities.color("primary");
+  }
+
+  &__subtitle {
+    font-size: 1.125rem;
+    color: utilities.color("primary");
+    line-height: 1.6;
+    font-weight: utilities.font-weight("regular");
+  }
+
+  &__btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: utilities.color("primary");
+    color: #fff;
+    font-weight: utilities.font-weight("semiBold");
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    &:hover {
+      background-color: utilities.pantone("TiffanyBlue");
+      transform: translateY(-2px) scale(1.05);
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+
+  &__image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+
+    img {
+      max-width: 100%;
+      border-radius: 20px;
+      animation: imageFloat 4s ease-in-out infinite;
+      &:hover {
+        animation: imageShake 0.4s ease-in-out;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+    text-align: center;
+    margin-top: 50px;
+    &__title {
+      font-size: utilities.font-size("font-size-28");
+    }
+    &__subtitle {
+      font-size: utilities.font-size("font-size-18");
+    }
+    &__image {
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@keyframes imageFloat {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes imageShake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-4px);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+  75% {
+    transform: translateX(-4px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

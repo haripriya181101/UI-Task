@@ -3,383 +3,259 @@
 
 <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Solus</title>
 </head>
 
 <body>
-    <div>
-        <header class="header">
-            <div class="header__topbar header__topbar_info">
-                <div class="header__store-info">
-                    <a href="#"><span class="icon-truck"></span>
-                        <span>Envío gratuito a tienda</span></a>
-                </div>
-                <div class="header__store-info">
-                    <a href="#"><span class="icon-truck"></span>
-                        <span>Envío gratuito a domicilio a partir de 50€</span></a>
-                </div>
-                <div class="header__store-info">
-                    <a href="#"><span class="icon-top-down"></span>
-                        <span>Devoluciones hasta 60 días</span></a>
-                </div>
+    <header class="generic-container header" id="header">
+        <span class="icon-hamburger" id="hamburger"></span>
+
+        <nav class="header__nav">
+            <div class="header__section header__section--left">
+                <ul class="header__menu">
+                    <li><a class="header__link" href="#">Home</a></li>
+                    <li><a class="header__link" href="#">About</a></li>
+                    <li><a class="header__link" href="#">Services</a></li>
+                </ul>
             </div>
 
-            <div class="header__mobile">
-                <div class="header__mobile-top">
-                    <div class="header__hamburger-container">
-
-                        <img src="./src/images/hamburger.png" alt="Menu" class="header__hamburger" id="hamburgerBtn" />
-
-
-                        <img src="./src/images/close.png" alt="Close" class="header__close-btn" id="closeBtn"
-                            style="display: none;" />
-
-                    </div>
-
-
-                    <figure class="header__logo">
-                        <img class="header__logo-image" src="./src/images/logo.svg" alt="Logo" />
-                    </figure>
-
-                    <div class="header__icons">
-                        <a href="#"><span class="icon-Usuario header__icon"></span></a>
-                        <a href="#"><span class="icon-heart header__icon"></span></a>
-                        <a href="#"><span class="icon-store header__icon"></span></a>
-                    </div>
-                </div>
-
-                <div class="header__search-bar">
-                    <input type="text" class="header__search" placeholder="Buscar" />
-                    <span class="icon-search header__search-icon"></span>
-                </div>
+            <div class="header__section header__section--center">
+                <a class="header__link header__link--logo" href="#">Solus</a>
             </div>
 
-            <div class="header__navigation" id="mobileMenu">
-                <div class="header__topbar header__topbar_nav">
-                    <ul class="header__gender-list">
-                        <li><a href="#">HOMBRE</a></li>
-                        <li><a href="#">MUJER</a></li>
-                        <li><a href="#">NIÑO/A</a></li>
-                    </ul>
-                    <hr class="header__location-divider" />
-                    <figure class="header__logo">
-                        <img class="header__logo-image" src="./src/images/logo.svg" alt="Logo" />
-                    </figure>
-                    <div class="header__icons">
-                        <a href="#"><span class="icon-location2 header__icon"></span> </a>
-                        <a href="#"><span class="icon-Usuario header__icon"></span></a>
-                        <a href="#"><span class="icon-heart header__icon"></span></a>
-                        <a href="#"><span class="icon-store header__icon"></span></a>
-                    </div>
-                </div>
-
-                <div class="header__topbar header__topbar_menu">
-                    <ul class="header__menu-list">
-                        <li><a href="#">OFERTAS</a>
-                            <figure class="header__menu-icon"><img src="./src/images/greater-than.png" alt="" srcset="">
-                            </figure>
-                        </li>
-                        <li><a href="#">DESTACADOS</a>
-                            <figure class="header__menu-icon"><img src="./src/images/greater-than.png" alt="" srcset="">
-                            </figure>
-                        </li>
-                        <li><a href="#">CALZADO</a>
-                            <figure class="header__menu-icon"><img src="./src/images/greater-than.png" alt="" srcset="">
-                            </figure>
-                        </li>
-                        <li><a href="#">ACCESORIOS</a>
-                            <figure class="header__menu-icon"><img src="./src/images/greater-than.png" alt="" srcset="">
-                            </figure>
-                        </li>
-                        <li><a href="#">DEPORTES</a>
-                            <figure class="header__menu-icon"><img src="./src/images/greater-than.png" alt="" srcset="">
-                            </figure></span>
-                        </li>
-                        <li><a href="#">MARCAS</a>
-                            <figure class="header__menu-icon"><img src="./src/images/greater-than.png" alt="" srcset="">
-                            </figure>
-                        </li>
-                    </ul>
-                    <div class="header__location-container">
-                        <span class="header__location-text">
-                            ESTAS COMPRANDO EN
-                        </span>
-                        <div class="header__location-dropdown-wrapper">
-                            <div class="header__location-current">
-                                <span class="icon-location2 header__location-icon"></span>
-                                <span class="header__location-name">Peninsula</span>
-                            </div>
-                            <div class="header__location-change">
-                                <span class="header__location-change-text">Cambiar</span>
-                                <figure class="header__dropdown-icon-wrap">
-                                    <img src="./src/images/dropdown.png" alt="">
-                                </figure>
-                            </div>
-                        </div>
-                        <hr class="header__location-divider" />
-                        <Button class="header__button">ENCUENTRA TU TIENDA</Button>
-                    </div>
-
-                    <div class="header__search-bar">
-                        <input type="text" class="header__search" placeholder="Buscar" />
-                        <span class="icon-search header__search-icon"></span>
-                    </div>
-                </div>
+            <div class="header__section header__section--right">
+                <ul class="header__menu">
+                    <li><a class="header__link" href="#">Therapists</a></li>
+                    <li><a class="header__link" href="#">Resources</a></li>
+                    <li><a class="header__link" href="#">Contact</a></li>
+                </ul>
             </div>
-        </header>
-        <section class="banner">
-            <div class="swiper banner__swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide banner__slider">
-                        <picture>
-                            <source media="(max-width: 768px)" srcset="./src/images/hero-responsive.png" />
-                            <img src="./src/images/hero.png" alt="Slide 1" />
-                        </picture>
-                    </div>
-                    <div class="swiper-slide banner__slider">
-                        <picture>
-                            <source media="(max-width: 768px)" srcset="./src/images/hero-responsive.png" />
-                            <img src="./src/images/hero.png" alt="Slide 2" />
-                        </picture>
-                    </div>
-                    <div class="swiper-slide banner__slider">
-                        <picture>
-                            <source media="(max-width: 768px)" srcset="./src/images/hero-responsive.png" />
-                            <img src="./src/images/hero.png" alt="Slide 3" />
-                        </picture>
-                    </div>
-                </div>
-                <div class="swiper-nav-vertical">
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-                </div>
+        </nav>
+    </header>
+    <aside class="sidebar" id="sidebar">
+        <span class="sidebar__close" id="closeSidebar">&times;</span>
 
-                <div class="swiper-pagination"></div>
-            </div>
-            <div class="banner__desc">
-                <figure class="banner__adidas">
-                    <picture>
-                        <source srcset="src/images/adidas.png" media="(min-width: 992px)" />
-                        <img src="src/images/nike.png" alt="Brand logo" />
-                    </picture>
-                </figure>
+        <ul class="sidebar__menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Therapists</a></li>
+            <li><a href="#">Resources</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </aside>
 
-                <p class="banner__title">RUN FALCON</p>
-                <p class="banner__content">
-                    Inspired by black panther, this innovative new shoe features a mix of
-                    mesh and primeknit over a 3D-printed sole.
+    <section class="generic-container">
+        <div class="banner">
+
+            <img src="./src/images/banner.png" alt="" class="banner__decor banner__decor--left" />
+
+            <img src="./src/images/banner2.png" alt="" class="banner__decor banner__decor--right" />
+
+            <div class="banner__content">
+                <h1 class="banner__title">Support for Your Mental Well-being</h1>
+                <p class="banner__subtitle">
+                    Connect with licensed therapists, counselors, and wellness coaches to support your journey.
                 </p>
-                <button class="banner__button">
-                    <span class="icon-right-arrow"></span><span> HOMBRE</span>
-                </button>
+                <a href="#" class="banner__btn">Get Started</a>
             </div>
-        </section>
-        <footer class="footer">
-            <div class="footer__wrapper">
-                <ul class="footer__list">
-                    <li class="footer__section dropdown">
-                        <div class="footer__title-wrap">
-                            <h5 class="footer__title dropdown__toggle">¿Necesitas ayuda?</h5>
-                            <figure class="footer__responsive-dropdown">
-                                <img src="./src/images/responsive-dropdown.png" alt="">
-                            </figure>
-                        </div>
-                        <span class="icon-dropdow"></span>
-                        <ul class="footer__inner-list">
-                            <li>
-                                <p class="footer__desc">
-                                    Estamos a tu disposición para ayudarte en tu compra online
-                                </p>
-                            </li>
-                            <li class="footer__mail-wrap">
-                                <span class="icon-mail footer__mail-icon"></span>
-                                <h5 class="footer__email">937 970 248</h5>
-                            </li>
-                            <li class="footer__mail-wrap">
-                                <span class="icon-mail footer__mail-icon"></span>
-                                <h5 class="footer__email">atencionalcliente@base.net</h5>
-                            </li>
-                            <li>
-                                <p class="footer__timing">Lunes - sábado de 10:00 - 20:00</p>
-                            </li>
-                            <li>
-                                <p class="footer__desc">
-                                    Para información comercial, envía un email a
-                                    movimeintosbase@base.net
-                                </p>
-                            </li>
-                        </ul>
-                    </li>
 
-                    <li class="footer__section dropdown">
-                        <div class="footer__title-wrap">
-                            <h5 class="footer__title dropdown__toggle">Sobre Base</h5>
-                            <figure class="footer__responsive-dropdown">
-                                <img src="./src/images/responsive-dropdown.png" alt="">
-                            </figure>
-                        </div>
+        </div>
+    </section>
 
-                        <ul class="footer__inner-list">
-                            <li>
-                                <p class="footer__desc">Sobre nosotros</p>
-                            </li>
-                            <li>
-                                <p class="footer__desc">Trabaja con nosotros</p>
-                            </li>
-                            <li>
-                                <p class="footer__social-wrap">
-                                    <span class="icon-facebook footer__social-media"></span>
-                                    <span class="icon-facebook footer__social-media"></span>
-                                </p>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                <ul class="footer__list">
-                    <li class="footer__section dropdown">
-                        <div class="footer__title-wrap">
-                            <h5 class="footer__title dropdown__toggle">Atención al cliente</h5>
-                            <figure class="footer__responsive-dropdown">
-                                <img src="./src/images/responsive-dropdown.png" alt="">
-                            </figure>
-                        </div>
+    <section class="generic-container section-card">
+        <div class="section-card__content">
+            <h2 class="section-card__title">We Help You Prioritize Your Mental Health</h2>
+            <p class="section-card__subtitle">
+                Browse therapists, book a session, and start your healing journey with trusted professionals.
+            </p>
+            <a href="#" class="section-card__btn">Find a Therapist</a>
+        </div>
+        <div class="section-card__image">
+            <img src="./src/images/card.png" alt="Therapist Image">
+        </div>
+    </section>
 
-                        <ul class="footer__inner-list">
-                            <li>
-                                <p class="footer__desc">Preguntas frecuentes</p>
-                            </li>
-                            <li>
-                                <p class="footer__desc">Envíos</p>
-                            </li>
-                            <li>
-                                <p class="footer__desc">Devoluciones</p>
-                            </li>
-                            <li>
-                                <p class="footer__desc">Seguimiento del pedido</p>
-                            </li>
-                            <li>
-                                <p class="footer__desc">Condiciones de uso</p>
-                            </li>
-                            <li>
-                                <p class="footer__desc">Contacto</p>
-                            </li>
-                        </ul>
-                    </li>
+    <section class="generic-container services">
+        <div class="services__header">
+            <h2 class="services__title">Your Path to Well-being</h2>
+            <p class="services__subtitle">
+                Discover expert guidance for a healthier mind and balanced life.
+            </p>
+        </div>
 
-                    <li class="footer__section dropdown">
-                        <div class="footer__title-wrap">
-                            <h5 class="footer__title dropdown__toggle">ESTAS COMPRANDO EN</h5>
-                            <figure class="footer__responsive-dropdown">
-                                <img src="./src/images/responsive-dropdown.png" alt="">
-                            </figure>
-                        </div>
+        <div class="services__grid">
+            <div class="service-card service-card--with-image">
+                <div class="service-card__content">
+                    <h3 class="service-card__title">Mindfulness & Meditation</h3>
+                    <p class="service-card__text">
+                        Guided meditation sessions and stress management techniques.
+                    </p>
+                    <a href="#" class="service-card__btn">Learn More</a>
+                </div>
 
-                        <ul class="footer__inner-list">
-                            <li>
-                                <div class="footer__location">
-                                    <p class="footer__location-wrap">
-                                        <span class="icon-location2 footer__location-icon"></span>
-                                        <span class="footer__email">PENINSULA</span>
-                                    </p>
-                                    <div class="footer__change">
-                                        <span class="footer__change-desc">Cambiar</span>
-                                        <figure class="footer__dropdown">
-                                            <picture>
-                                                <source media="(max-width: 768px)"
-                                                    srcset="src/images/responsive-dropdown.png" />
-
-                                                <img src="src/images/footer-dropdown.svg" alt="Dropdown icon" />
-                                            </picture>
-                                        </figure>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <button class="footer__button">
-                                    BUSCA TU TIENDA <span class="icon-right-arrow"></span>
-                                </button>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                <ul class="footer__list">
-                    <li class="footer__section dropdown">
-                        <div class="footer__title-wrap">
-                            <h5 class="footer__title dropdown__toggle">Pago seguro</h5>
-                            <figure class="footer__responsive-dropdown">
-                                <img src="./src/images/responsive-dropdown.png" alt="">
-                            </figure>
-                        </div>
-
-                        <ul class="footer__inner-list">
-                            <li><span class="icon-logo footer__logo"></span></li>
-                        </ul>
-                    </li>
-
-                    <li class="footer__section dropdown">
-                        <div class="footer__title-wrap">
-                            <h5 class="footer__title dropdown__toggle">Metodos de pago</h5>
-                            <figure class="footer__responsive-dropdown">
-                                <img src="./src/images/responsive-dropdown.png" alt="">
-                            </figure>
-                        </div>
-                        <ul class="footer__inner-list">
-                            <li>
-                                <figure class="footer__payment-wrapper">
-                                    <img src="./src/images/payment.png" alt="" />
-                                </figure>
-                            </li>
-                            <li class="footer__desc footer__desc_primary">ESTAS BUSCANDO EN</li>
-                            <li>
-                                <div class="footer__location footer__location_primary">
-                                    <p class="footer__location-wrap">
-                                        <span class="icon-location2 footer__location-icon"></span>
-                                        <span class="footer__email">PENINSULA</span>
-                                    </p>
-                                    <div class="footer__change">
-                                        <span class="footer__change-desc">Cambiar</span>
-                                        <figure class="footer__dropdown">
-                                            <picture>
-                                                <source media="(max-width: 768px)"
-                                                    srcset="src/images/responsive-dropdown.png" />
-
-                                                <img src="src/images/footer-dropdown.svg" alt="Dropdown icon" />
-                                            </picture>
-                                        </figure>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <button class="footer__button footer__button_responsive">
-                                    BUSCA TU TIENDA <span class="icon-right-arrow"></span>
-                                </button>
-                            </li>
-                            <li>
-                                <h5 class="footer__title footer__title_casual dropdown__toggle">Descubre nuestra web
-                                    exclusiva de casual</h5>
-                            </li>
-                            <li>
-                                <figure class="footer__sticker-wrapper">
-                                    <img src="./src/images/sticker.svg" alt="" />
-                                </figure>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+                <div class="service-card__image">
+                    <img src="/src/images/heart.png" alt="Mindfulness" />
+                </div>
             </div>
-            <div class="footer__bottom">
-                <ul class="footer__bottom-list">
-                    <li>Política de privacidad</li>
-                    <li>Política de cookies</li>
-                    <li>Anuncios, convocatorias e información al accionista</li>
-                    <li>Formulario de desistimiento</li>
-                </ul>
-                <p class="footer__copy-right">@ Base 2021. Todos los derechos reservados</p>
+            <div class="service-card service-card__right-card">
+                <h3 class="service-card__title">One-on-One Therapy</h3>
+                <p class="service-card__text">
+                    Virtual and in-person therapy sessions with licensed professionals.
+                </p>
+                <a href="#" class="service-card__btn">Learn More</a>
             </div>
-        </footer>
-    </div>
+        </div>
+
+
+
+        <div class="service-wide">
+            <div class="service-wide__content">
+                <h3 class="service-wide__title">Wellness Coaching</h3>
+                <p class="service-wide__text">
+                    Personalized guidance to help you build healthier habits, manage stress,
+                    and achieve balance in all areas of your life.
+                </p>
+                <p class="service-wide__text">
+                    Our wellness coaches support you in creating sustainable routines for
+                    mental, emotional, and physical well-being.
+                </p>
+                <a href="#" class="service-wide__btn">Learn More</a>
+            </div>
+
+            <div class="service-wide__image">
+                <img src="./src/images/wellness-coaching.png" alt="Wellness Coaching" />
+            </div>
+        </div>
+    </section>
+    <section class="testimonials">
+        <div class="generic-container testimonials__wrapper">
+
+            <div class="testimonials__content">
+                <h2 class="testimonials__title">What Our Clients Are Saying</h2>
+                <p class="testimonials__subtitle">
+                    Positive experiences from users who have benefited from therapy or wellness programs.
+                </p>
+
+                <div class="testimonials__controls">
+                    <!-- <button class="testimonials__nav testimonials__nav--prev">Prev</button>
+                    <button class="testimonials__nav testimonials__nav--next">Next</button> -->
+                </div>
+            </div>
+            <div class="testimonials__slider  swiper testimonials-swiper">
+                <div class="swiper-wrapper">
+                    <div class="testimonial-card swiper-slide">
+                        <p class="testimonial-card__text">
+                            “Solus made it so easy to find the right therapist for me. The sessions have truly
+                            transformed
+                            my mindset, and I feel more in control of my emotions than ever before!”
+                        </p>
+                        <span class="testimonial-card__author">— Anna R., 32</span>
+                    </div>
+
+                    <div class="testimonial-card swiper-slide">
+                        <p class="testimonial-card__text">
+                            “"I was struggling with stress and anxiety, but the mindfulness programs on Solus have
+                            helped me regain balance. I finally feel like I'm prioritizing my mental well-being.".”
+                        </p>
+                        <span class="testimonial-card__author">— Michael T., 41</span>
+                    </div>
+                    <div class="testimonial-card swiper-slide">
+                        <p class="testimonial-card__text">
+                            “The wellness coaching helped me build habits that actually stick. I feel calmer, healthier,
+                            and
+                            more balanced.”
+                        </p>
+                        <span class="testimonial-card__author">— Michael T., 41</span>
+                    </div>
+                    <div class="testimonial-card swiper-slide">
+                        <p class="testimonial-card__text">
+                            “The wellness coaching helped me build habits that actually stick. I feel calmer, healthier,
+                            and
+                            more balanced The wellness coaching helped me build habits that actually stick. I feel
+                            calmer, healthier,
+                            and
+                            more balanced.
+                            The wellness coaching helped me build habits that actually stick. I feel calmer, healthier,
+                            and
+                            more balanced.The wellness coaching helped me build habits that actually stick. I feel
+                            calmer, healthier,
+                            and
+                            more balanced.
+                            The wellness coaching helped me build habits that actually stick. I feel calmer, healthier,
+                            and
+                            more balanced The wellness coaching helped me build habits that actually stick. I feel
+                            calmer, healthier,
+                            and
+                            more balanced.
+                            The wellness coaching helped me build habits that actually stick. I feel calmer, healthier,
+                            and
+                            more balanced.The wellness coaching helped me build habits that actually stick. I feel
+                            calmer, healthier,
+                            and
+                            more balanced.
+                            The wellness coaching helped me build habits that actually stick. I feel calmer, healthier,
+                            and
+                            more balanced The wellness coaching helped me build habits that actually stick. I feel
+                            calmer, healthier,
+                            and
+                            more balanced.
+                            The wellness coaching helped me build habits that actually stick. I feel calmer, healthier,
+                            and
+                            more balanced.The wellness coaching helped me build habits that actually stick. I feel
+                            calmer, healthier,
+                            and
+                            more balanced.”
+                        </p>
+                        <span class="testimonial-card__author">— Michael T., 41</span>
+                    </div>
+                    <div class="testimonial-card swiper-slide">
+                        <p class="testimonial-card__text">
+                            “The wellness coaching helped me build habits that actually stick. I feel calmer, healthier,
+                            and
+                            more balanced.”
+                        </p>
+                        <span class="testimonial-card__author">— Michael T., 41</span>
+                    </div>
+                    <div class="testimonial-card swiper-slide">
+                        <p class="testimonial-card__text">
+                            “The wellness coaching helped me build habits that actually stick. I feel calmer, healthier,
+                            and
+                            more balanced.”
+                        </p>
+                        <span class="testimonial-card__author">— Michael T., 41</span>
+                    </div>
+                    <div class="testimonial-card swiper-slide">
+                        <p class="testimonial-card__text">
+                            “The wellness coaching helped me build habits that actually stick. I feel calmer, healthier,
+                            and
+                            more balanced.”
+                        </p>
+                        <span class="testimonial-card__author">— Michael T., 41</span>
+                    </div>
+                    <div class="testimonial-card swiper-slide">
+                        <p class="testimonial-card__text">
+                            “The wellness coaching helped me build habits that actually stick. I feel calmer, healthier,
+                            and
+                            more balanced.”
+                        </p>
+                        <span class="testimonial-card__author">— Michael T., 41</span>
+                    </div>
+
+                    <div class="testimonial-card swiper-slide">
+                        <p class="testimonial-card__text">
+                            “The wellness coaching helped me build habits that actually stick. I feel calmer, healthier,
+                            and
+                            more balanced.”
+                        </p>
+                        <span class="testimonial-card__author">— Michael T., 41</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
     <script type="module" src="./src/js/main.js"></script>
 </body>
 

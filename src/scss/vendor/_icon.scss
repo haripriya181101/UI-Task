@@ -2,22 +2,13 @@
 
 // Define icon unicode using string.unquote for each icon
 $icon-right-arrow: string.unquote('"\\e900"');
-$icon-Usuario: string.unquote('"\\e901"');
-$icon-truck: string.unquote('"\\e902"');
-$icon-top-down: string.unquote('"\\e903"');
-$icon-Store: string.unquote('"\\e904"');
-$icon-store: string.unquote('"\\e905"');
-$icon-mail: string.unquote('"\\e906"');
-$icon-logo: string.unquote('"\\e907"');
-$icon-location: string.unquote('"\\e908"');
-$icon-like: string.unquote('"\\e909"');
-$icon-less-than: string.unquote('"\\e90a"');
-$icon-heart: string.unquote('"\\e90b"');
-$icon-greater-than: string.unquote('"\\e90c"');
-$icon-facebook: string.unquote('"\\e90d"');
-$icon-dropdown: string.unquote('"\\e90e"');
-$icon-location2: string.unquote('"\\e948"');
-$icon-search: string.unquote('"\\e986"');
+$icon-left-arrow: string.unquote('"\\e901"');
+$icon-add: string.unquote('"\\e902"');
+$icon-whatsapp: string.unquote('"\\e903"');
+$icon-instagram: string.unquote('"\\e904"');
+$icon-facebook: string.unquote('"\\e905"');
+$icon-linkdin: string.unquote('"\\e906"');
+$icon-hamburger: string.unquote('"\\e9bd"');
 
 @font-face {
   font-family: "icomoon";
@@ -46,52 +37,24 @@ $icon-search: string.unquote('"\\e986"');
 .icon-right-arrow:before {
   content: "\e900";
 }
-.icon-Usuario:before {
+.icon-left-arrow:before {
   content: "\e901";
 }
-.icon-truck:before {
+.icon-add:before {
   content: "\e902";
 }
-.icon-top-down:before {
+.icon-whatsapp:before {
   content: "\e903";
 }
-.icon-Store:before {
+.icon-instagram:before {
   content: "\e904";
 }
-.icon-store:before {
+.icon-facebook:before {
   content: "\e905";
 }
-.icon-mail:before {
+.icon-linkdin:before {
   content: "\e906";
 }
-.icon-logo:before {
-  content: "\e907";
-}
-.icon-location:before {
-  content: "\e908";
-}
-.icon-like:before {
-  content: "\e909";
-}
-.icon-less-than:before {
-  content: "\e90a";
-}
-.icon-heart:before {
-  content: "\e90b";
-}
-.icon-greater-than:before {
-  content: "\e90c";
-}
-.icon-facebook:before {
-  content: "\e90d";
-}
-.icon-dropdown:before {
-  content: "\e90e";
-}
-.icon-location2:before {
-  content: "\e948";
-}
-
-.icon-search:before {
-  content: "\e986";
+.icon-hamburger:before {
+  content: "\e9bd";
 }
