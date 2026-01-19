@@ -39,12 +39,28 @@ function addTestimonialHoverStop(swiper) {
   });
 }
 
+function initTestimonialNavActive() {
+  const leftBtn = document.querySelector(".testimonial__left");
+  const rightBtn = document.querySelector(".testimonial__right");
+  leftBtn.classList.add("is-active");
+
+  leftBtn.addEventListener("click", () => {
+    leftBtn.classList.add("is-active");
+    rightBtn.classList.remove("is-active");
+  });
+
+  rightBtn.addEventListener("click", () => {
+    rightBtn.classList.add("is-active");
+    leftBtn.classList.remove("is-active");
+  });
+}
+
 let partnersSwiper;
 
 function initPartnersSwiper() {
   return new Swiper(".partners-swiper", {
     modules: [Autoplay],
-    slidesPerView: 4,
+    slidesPerView: 5,
     spaceBetween: 64,
     loop: true,
     speed: 800,
@@ -55,7 +71,10 @@ function initPartnersSwiper() {
     breakpoints: {
       0: { slidesPerView: 2 },
       768: { slidesPerView: 3 },
-      1024: { slidesPerView: 4 },
+      1024: {
+        slidesPerView: 5,
+        spaceBetween: 64,
+      },
     },
   });
 }
@@ -63,15 +82,15 @@ function initPartnersSwiper() {
 document.addEventListener("DOMContentLoaded", () => {
   testimonialsSwiper = initTestimonialsSwiper();
   addTestimonialHoverStop(testimonialsSwiper);
+  initTestimonialNavActive();
+
   partnersSwiper = initPartnersSwiper();
+
   document
     .querySelector(".partners-swiper")
-    .addEventListener("mouseenter", () => {
-      partnersSwiper.autoplay.stop();
-    });
+    .addEventListener("mouseenter", () => partnersSwiper.autoplay.stop());
+
   document
     .querySelector(".partners-swiper")
-    .addEventListener("mouseleave", () => {
-      partnersSwiper.autoplay.start();
-    });
+    .addEventListener("mouseleave", () => partnersSwiper.autoplay.start());
 });
