@@ -1,0 +1,89 @@
+@use "../../variables/utilities" as utilities;
+.explore {
+  padding: 100px 0;
+  text-align: center;
+  margin-top: 100px;
+
+  &__header {
+    width: 445px;
+    margin: 0 auto 64px;
+    margin-bottom: 80px;
+  }
+  &__title {
+    font-size: utilities.font-size("font-size-52");
+    font-weight: utilities.font-weight("bold");
+    line-height: 100%;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+    color: utilities.color("primary");
+  }
+
+  &__title-content {
+    font-size: utilities.font-size("font-size-22");
+    font-weight: utilities.font-weight("regular");
+    color: utilities.color("primary");
+    line-height: 34px;
+    letter-spacing: 0.5px;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+
+  &__card {
+    padding: 40px 32px;
+    background: #fff;
+    border-radius: 24px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+    }
+  }
+  &__card-title {
+    font-size: utilities.font-size("font-size-30");
+    font-weight: utilities.font-weight("semiBold");
+    margin-bottom: 12px;
+    color: utilities.color("primary");
+  }
+
+  &__card-content {
+    font-size: 15px;
+    color: utilities.color("text-secondary");
+    margin-bottom: 24px;
+    line-height: 1.6;
+  }
+
+  &__btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 24px;
+    background-color: utilities.color("primary");
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: utilities.color("primary-dark");
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 64px 0;
+
+    &__cards {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    &__card {
+      text-align: center;
+    }
+  }
+}
