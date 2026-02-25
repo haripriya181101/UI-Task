@@ -3,18 +3,21 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 .generic-container {
-  max-width: 1600x;
+  max-width: 1440px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding: 0 100px;
   min-height: 0;
   height: auto;
+
   @media (max-width: 992px) {
     padding: 0 24px;
   }
 }
+
 body {
   background-color: #f7f6f4;
 }

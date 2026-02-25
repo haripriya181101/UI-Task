@@ -79,12 +79,10 @@
       left: -120%;
       width: 120%;
       height: 100%;
-      background: linear-gradient(
-        120deg,
-        transparent,
-        rgba(255, 255, 255, 0.4),
-        transparent
-      );
+      background: linear-gradient(120deg,
+          transparent,
+          rgba(255, 255, 255, 0.4),
+          transparent);
       transition: left 0.6s ease;
     }
 
@@ -93,13 +91,34 @@
     }
   }
 
+  @media (max-width: 1057px) {
+    padding: 64px 0;
+
+    &__content {
+      max-width: 440px;
+    }
+
+    &__decor {
+      top: 95px;
+
+      &--left {
+        left: -13px;
+      }
+    }
+  }
+
   @media (max-width: 768px) {
+    padding: 34px 0;
+
     &__title {
       font-size: utilities.font-size("font-size-28");
+      line-height: 110%;
     }
+
     &__subtitle {
       font-size: utilities.font-size("font-size-16");
     }
+
     &__decor {
       width: 118px;
       transform: scale(1.5);
@@ -109,46 +128,48 @@
       max-width: 500px;
       padding: 0px 16px;
     }
+  }
+
+  @media (max-width: 600px) {
+    padding: 24px 0;
 
     &__title {
-      font-size: utilities.font-size("font-size-40");
-      line-height: 110%;
+      font-size: utilities.font-size("font-size-24");
     }
 
     &__subtitle {
-      font-size: utilities.font-size("font-size-18");
+      font-size: utilities.font-size("font-size-14");
+    }
+
+    &__content {
+      max-width: 320px;
+      padding: 0px 16px;
     }
   }
-  @media (max-width: 476px) {
-    &__title {
-      font-size: utilities.font-size("font-size-28");
+
+  @media (max-width: 432px) {
+
+    &__content {
+      padding: 0px 50px;
     }
-    &__subtitle {
-      font-size: utilities.font-size("font-size-16");
+
+    &__btn {
+      margin-top: 32px;
     }
   }
 }
 
-@media (max-width: 1024px) {
-  .banner {
-    padding: 64px 0;
 
-    &__decor {
-      top: 58%;
-      &--left {
-        left: -13px;
-      }
-    }
-  }
-}
 
 @keyframes pulse {
   0% {
     box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
   }
+
   70% {
     box-shadow: 0 0 0 15px rgba(255, 255, 255, 0);
   }
+
   100% {
     box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
   }
@@ -158,9 +179,11 @@
   0% {
     transform: translateY(-23%) translateX(0);
   }
+
   50% {
     transform: translateY(-23%) translateX(15px);
   }
+
   100% {
     transform: translateY(-23%) translateX(0);
   }
