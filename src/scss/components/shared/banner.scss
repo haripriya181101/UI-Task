@@ -21,6 +21,12 @@
     user-select: none;
     animation: decorFloat 2s ease-in-out infinite;
 
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
     &--left {
       left: -13px;
     }

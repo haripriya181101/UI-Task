@@ -5,10 +5,20 @@
   margin-top: 100px;
 
   &__header {
-    width: 445px;
+    max-width: 600px;
     margin: 0 auto 64px;
-    margin-bottom: 80px;
   }
+
+  &__tagline {
+    display: block;
+    font-size: utilities.font-size("font-size-14");
+    font-weight: utilities.font-weight("bold");
+    color: utilities.color("primary");
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
   &__title {
     font-size: utilities.font-size("font-size-52");
     font-weight: utilities.font-weight("bold");
@@ -33,57 +43,87 @@
   }
 
   &__card {
-    padding: 40px 32px;
+    padding: 60px 48px;
     background: #fff;
-    border-radius: 24px;
-    text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 60px;
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     &:hover {
       transform: translateY(-6px);
       box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
     }
   }
+
   &__card-title {
     font-size: utilities.font-size("font-size-30");
     font-weight: utilities.font-weight("semiBold");
-    margin-bottom: 12px;
+    margin-bottom: 24px;
     color: utilities.color("primary");
+    line-height: 1.2;
   }
 
   &__card-content {
-    font-size: 15px;
-    color: utilities.color("text-secondary");
-    margin-bottom: 24px;
+    font-size: utilities.font-size("font-size-18");
+    color: utilities.color("primary");
+    margin-bottom: 40px;
     line-height: 1.6;
+    flex-grow: 1;
   }
 
   &__btn {
     display: inline-block;
-    padding: 10px 20px;
-    border-radius: 24px;
-    background-color: utilities.color("primary");
+    padding: 14px 44px;
+    border-radius: 50px;
     color: #fff;
-    font-size: 14px;
-    font-weight: 500;
+    font-size: utilities.font-size("font-size-18");
+    font-weight: utilities.font-weight("semiBold");
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 
     &:hover {
-      background-color: utilities.color("primary-dark");
+      transform: translateY(-2px);
+    }
+
+    &--yellow {
+      background-color: utilities.pantone("GoldenYellow");
+    }
+
+    &--teal {
+      background-color: utilities.pantone("TiffanyBlue");
+    }
+
+    &--pink {
+      background-color: utilities.pantone("RosePink");
+    }
+  }
+
+  @media (max-width: 1024px) {
+    &__cards {
+      gap: 20px;
+    }
+    &__card {
+      padding: 40px 24px;
     }
   }
 
   @media (max-width: 768px) {
     padding: 64px 0;
 
+    &__header {
+      margin-bottom: 40px;
+    }
+
+    &__title {
+      font-size: utilities.font-size("font-size-32");
+    }
+
     &__cards {
       grid-template-columns: 1fr;
       gap: 24px;
-    }
-
-    &__card {
-      text-align: center;
     }
   }
 }

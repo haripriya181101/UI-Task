@@ -23,6 +23,15 @@
     display: none;
     font-size: 28px;
     cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 0;
+    transition: outline 0.2s ease;
+
+    &:focus-visible {
+      outline: 2px solid utilities.color("primary");
+      outline-offset: 4px;
+    }
 
     @media (max-width: 992px) {
       display: block;
@@ -140,6 +149,15 @@
     display: block;
     text-align: right;
     margin-bottom: 20px;
+    background: transparent;
+    border: none;
+    padding: 0;
+    width: 100%;
+    
+    &:focus-visible {
+      outline: 2px solid utilities.color("primary");
+      outline-offset: 2px;
+    }
   }
 
   &__menu {
@@ -151,7 +169,7 @@
 
       a {
         font-family: utilities.font-family("primary");
-        font-size: 18px;
+        font-size: utilities.font-size("font-size-18");
         color: utilities.color("primary");
         text-decoration: none;
       }

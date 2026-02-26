@@ -17,13 +17,13 @@
   }
 
   &__title {
-    font-size: 2.5rem;
+    font-size: utilities.font-size("font-size-40");
     font-weight: utilities.font-weight("bold");
     color: utilities.color("primary");
   }
 
   &__subtitle {
-    font-size: 1.125rem;
+    font-size: utilities.font-size("font-size-18");
     color: utilities.color("primary");
     line-height: 1.6;
     font-weight: utilities.font-weight("regular");

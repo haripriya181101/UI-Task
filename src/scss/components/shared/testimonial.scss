@@ -35,10 +35,11 @@
     display: flex;
     gap: 16px;
 
-    span {
+    button {
       width: 48px;
       height: 48px;
       border-radius: 50%;
+      border: 1px solid utilities.color("primary");
       display: flex;
       align-items: center;
       justify-content: center;
@@ -46,6 +47,13 @@
       background-color: transparent;
       color: utilities.color("primary");
       transition: all 0.3s ease;
+      padding: 0;
+
+      &:focus-visible {
+        outline: 2px solid utilities.color("primary");
+        outline-offset: 4px;
+      }
+
       &.is-active {
         background-color: utilities.color("primary");
         color: #fff;
@@ -121,7 +129,7 @@
     transform: translateY(-6px);
   }
   &:nth-child(even) {
-    background-color: #00373e;
+    background-color: utilities.color("primary");
     .testimonial-card__text,
     .testimonial-card__author {
       color: #fff;

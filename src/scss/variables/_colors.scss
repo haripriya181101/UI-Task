@@ -20,6 +20,10 @@ $pantone: (
   Ivory: #fdf7f1,
   SilverGrey: #b8b8b8,
   softPeach: #f9e6d0,
+  Alabaster: #f7f6f4,
+  Black: #000000,
+  Gainsboro: #dcdcdc,
+  DarkGreenCyan: #008b8b,
 );
 /*=====================================
 =            Colors           		 =
@@ -40,7 +44,7 @@ $background: (
 );
 
 $border: (
-  primary: map-get($pantone, Gainsboro),
-  secondary: map-get($pantone, Black),
-  tertiary: map-get($pantone, Dark-Green-Cyan),
+  primary: map.get($pantone, Gainsboro),
+  secondary: map.get($pantone, Black),
+  tertiary: map.get($pantone, DarkGreenCyan),
 );

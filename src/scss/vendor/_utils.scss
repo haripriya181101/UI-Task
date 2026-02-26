@@ -1,7 +1,14 @@
+@use "../variables/utilities" as utilities;
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+:focus-visible {
+  outline: 2px solid utilities.color("primary");
+  outline-offset: 4px;
 }
 
 .generic-container {
@@ -13,11 +20,15 @@
   min-height: 0;
   height: auto;
 
-  @media (max-width: 992px) {
+  @media (max-width: 1200px) {
+    padding: 0 40px;
+  }
+
+  @media (max-width: 768px) {
     padding: 0 24px;
   }
 }
 
 body {
-  background-color: #f7f6f4;
+  background-color: utilities.pantone("Alabaster");
 }
