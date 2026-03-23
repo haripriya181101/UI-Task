@@ -45,11 +45,9 @@
         </div>
       </nav>
     </header>
-    <aside
+    <dialog
       class="sidebar"
       id="sidebar"
-      role="dialog"
-      aria-modal="true"
       aria-label="Main Navigation"
     >
       <button
@@ -69,10 +67,11 @@
         <li><a href="#">Resources</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
-    </aside>
+    </dialog>
 
-    <section class="generic-container">
-      <div class="banner">
+    <main id="main">
+      <section class="generic-container">
+        <div class="banner">
         <figure class="banner__decor banner__decor--left">
           <img
             src="./src/images/banner.png"
@@ -112,12 +111,13 @@
         <a href="#" class="section-card__btn">Find a Therapist</a>
       </div>
       <figure class="section-card__image">
-        <img src="./src/images/card.png" alt="Therapist Image" />
+        <img src="./src/images/card.png" alt="A professional therapist" />
       </figure>
     </section>
 
     <section class="generic-container services">
       <div class="services__header">
+        <span class="services__tagline">SERVICES</span>
         <h2 class="services__title">Your Path to Well-being</h2>
         <p class="services__subtitle">
           Discover expert guidance for a healthier mind and balanced life.
@@ -350,7 +350,6 @@
     </section>
     <section class="explore generic-container">
       <div class="explore__header">
-        <span class="explore__tagline">EXPLORE & LEARN</span>
         <h2 class="explore__title">Resources for Your Well-being</h2>
         <p class="explore__title-content">
           Explore expert insights, self-care guides, and tools to support your
@@ -600,6 +599,7 @@
       </div>
     </section>
 
+    </main>
     <footer class="footer generic-container">
       <div class="footer__wrapper">
         <div class="footer__main">

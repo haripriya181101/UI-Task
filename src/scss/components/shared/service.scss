@@ -10,11 +10,21 @@
     max-width: 476px;
   }
 
+  &__tagline {
+    display: block;
+    font-size: utilities.font-size("font-size-14");
+    font-weight: utilities.font-weight("bold");
+    color: utilities.color("primary");
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
   &__title {
     font-size: utilities.font-size("font-size-52");
     margin-bottom: 20px;
     color: utilities.color("primary");
-    font-weight: utilities.font-weight("bold");
+    font-weight: utilities.font-weight("semiBold");
     line-height: 100%;
     letter-spacing: 0.5px;
   }
@@ -159,7 +169,7 @@
 .service-wide {
   background: #ffffff;
   border-radius: 60px;
-  padding: 48px;
+  padding: 60px 80px;
   display: flex;
   align-items: center;
   gap: 40px;
@@ -214,10 +224,11 @@
     color: #fff;
     text-decoration: none;
     font-weight: utilities.font-weight("semiBold");
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
 
     &:hover {
       background-color: utilities.pantone("TiffanyBlue");
+      color: utilities.color("primary");
       transform: translateY(-2px);
     }
 

@@ -32,11 +32,15 @@ function initTestimonialsSwiper() {
   });
 }
 
-function addTestimonialHoverStop(swiper) {
-  document.querySelectorAll(".testimonial-card").forEach((card) => {
-    card.addEventListener("mouseenter", () => swiper.autoplay.stop());
-    card.addEventListener("mouseleave", () => swiper.autoplay.start());
-  });
+function addTestimonialAccessibility(swiper) {
+  const container = document.querySelector(".testimonials-swiper");
+  
+  container.addEventListener("mouseenter", () => swiper.autoplay.stop());
+  container.addEventListener("mouseleave", () => swiper.autoplay.start());
+  
+  // Stop autoplay when focus is inside the slider
+  container.addEventListener("focusin", () => swiper.autoplay.stop());
+  container.addEventListener("focusout", () => swiper.autoplay.start());
 }
 
 function initTestimonialNavActive() {
@@ -81,16 +85,14 @@ function initPartnersSwiper() {
 
 document.addEventListener("DOMContentLoaded", () => {
   testimonialsSwiper = initTestimonialsSwiper();
-  addTestimonialHoverStop(testimonialsSwiper);
+  addTestimonialAccessibility(testimonialsSwiper);
   initTestimonialNavActive();
 
   partnersSwiper = initPartnersSwiper();
 
-  document
-    .querySelector(".partners-swiper")
-    .addEventListener("mouseenter", () => partnersSwiper.autoplay.stop());
-
-  document
-    .querySelector(".partners-swiper")
-    .addEventListener("mouseleave", () => partnersSwiper.autoplay.start());
+  const partnersContainer = document.querySelector(".partners-swiper");
+  partnersContainer.addEventListener("mouseenter", () => partnersSwiper.autoplay.stop());
+  partnersContainer.addEventListener("mouseleave", () => partnersSwiper.autoplay.start());
+  partnersContainer.addEventListener("focusin", () => partnersSwiper.autoplay.stop());
+  partnersContainer.addEventListener("focusout", () => partnersSwiper.autoplay.start());
 });

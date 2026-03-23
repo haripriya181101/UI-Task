@@ -1,12 +1,12 @@
 @use "../../variables/utilities" as utilities;
 
 .footer {
-  margin-top: 100px;
-  padding-bottom: 150px;
-
+  margin-top: 140px;
+  padding-bottom: 120px;
   &__wrapper {
     display: flex;
     gap: 32px;
+    align-items: flex-start;
 
     @media (max-width: 1024px) {
       flex-direction: column;
@@ -14,80 +14,97 @@
   }
 
   &__main {
-    flex: 1.2;
-    background: utilities.pantone("White");
+    flex: 1.3;
+    background: utilities.pantone("Alabaster");
     border-radius: 60px;
-    padding: 80px;
+    padding: 90px 100px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+    min-height: 560px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.02);
 
     @media (max-width: 1200px) {
       padding: 60px 40px;
     }
+
+    @media (max-width: 768px) {
+      border-radius: 40px;
+      padding: 40px;
+    }
   }
 
+
   &__logo {
-    font-size: 48px;
+    font-size: 56px;
     font-weight: utilities.font-weight("bold");
     color: utilities.color("primary");
-    margin-bottom: 48px;
     text-decoration: none;
+    margin-bottom: 64px;
     display: block;
+    font-family: serif;
+    letter-spacing: -1px;
   }
+
 
   &__nav {
     display: flex;
-    gap: 80px;
+    gap: 64px;
     margin-bottom: 80px;
 
     @media (max-width: 768px) {
-      flex-wrap: wrap;
-      gap: 40px;
+      flex-direction: column;
+      gap: 32px;
     }
   }
 
   &__column {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 16px;
 
     a {
       font-size: utilities.font-size("font-size-18");
       color: utilities.color("primary");
       text-decoration: none;
-      transition: opacity 0.3s ease;
-      font-weight: utilities.font-weight("medium");
+      font-weight: 500;
+      transition: 0.3s;
 
       &:hover {
-        opacity: 0.7;
+        opacity: 0.6;
+        transform: translateX(4px);
       }
     }
   }
 
   &__copyright {
     font-size: utilities.font-size("font-size-16");
+    opacity: 0.4;
     color: utilities.color("primary");
-    opacity: 0.3;
   }
 
   &__cta-card {
-    flex: 0.9;
+    flex: 1;
+    position: relative;
     background: utilities.color("primary");
     border-radius: 60px;
-    padding: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
+    padding: 80px 60px;
+    min-height: 560px;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
 
-    @media (max-width: 1200px) {
+    &:hover {
+      transform: translateY(-6px);
+    }
+
+    @media (max-width: 768px) {
+      border-radius: 40px;
       padding: 40px;
+      min-height: 420px;
     }
   }
-
   &__cta-content {
     position: relative;
     z-index: 2;
@@ -95,43 +112,48 @@
   }
 
   &__cta-title {
-    font-size: utilities.font-size("font-size-40");
-    font-weight: utilities.font-weight("bold");
-    color: utilities.pantone("White");
-    line-height: 1.2;
+    font-size: 52px;
+    line-height: 1.05;
+    letter-spacing: -1.5px;
+    color: #fff;
     margin-bottom: 32px;
-    letter-spacing: -0.5px;
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 8px;
+    font-weight: 600;
+    font-family: utilities.font-family("primary"), serif;
+
+    @media (max-width: 1200px) {
+      font-size: 40px;
+    }
   }
 
   &__cta-btn {
     display: inline-block;
-    background: utilities.pantone("White");
+    background: #fff;
     color: utilities.color("primary");
-    padding: 20px 40px;
+    padding: 16px 44px;
     border-radius: 100px;
     text-decoration: none;
-    font-weight: utilities.font-weight("semiBold");
-    font-size: utilities.font-size("font-size-18");
+    font-weight: 600;
     transition: all 0.3s ease;
-    text-align: center;
-    width: 100%;
 
     &:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 20px rgba(0, 55, 62, 0.4);
+      background: transparent;
+      color: #fff;
+      border: 1px solid #fff;
+    }
+
+    @media (max-width: 768px) {
+      width: 100%;
+      text-align: center;
     }
   }
 
   &__image {
     position: absolute;
-    top: 60px;
-    right: 40px;
-    width: 200px;
-    height: auto;
+    bottom: 0;
+    right: 0;
+    width: 300px;
     z-index: 1;
+    pointer-events: none;
 
     img {
       width: 100%;
@@ -140,15 +162,10 @@
     }
 
     @media (max-width: 1200px) {
-      width: 160px;
-      right: 20px;
+      width: 240px;
     }
 
     @media (max-width: 768px) {
-      position: relative;
-      top: 0;
-      right: 0;
-      margin: 40px 0;
       width: 180px;
     }
   }

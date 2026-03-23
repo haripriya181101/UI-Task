@@ -99,6 +99,7 @@
     &:hover {
       transform: translateY(-3px);
       background-color: utilities.pantone("TiffanyBlue");
+      color: utilities.color("primary");
       box-shadow: 0 8px 25px rgba(0, 55, 62, 0.3);
     }
 

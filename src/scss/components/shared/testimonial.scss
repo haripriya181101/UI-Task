@@ -13,9 +13,19 @@
     max-width: 420px;
   }
 
+  &__tagline {
+    display: block;
+    font-size: utilities.font-size("font-size-14");
+    font-weight: utilities.font-weight("bold");
+    color: utilities.color("primary");
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
   &__title {
     font-size: utilities.font-size("font-size-52");
-    font-weight: utilities.font-weight("bold");
+    font-weight: utilities.font-weight("semiBold");
     color: utilities.color("primary");
     line-height: 100%;
     letter-spacing: 0.5px;
@@ -147,6 +157,7 @@
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 6;
+    line-clamp: 6;
     flex-grow: 1;
   }
 

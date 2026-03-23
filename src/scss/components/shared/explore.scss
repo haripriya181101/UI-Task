@@ -21,7 +21,7 @@
 
   &__title {
     font-size: utilities.font-size("font-size-52");
-    font-weight: utilities.font-weight("bold");
+    font-weight: utilities.font-weight("semiBold");
     line-height: 100%;
     letter-spacing: 0.5px;
     margin-bottom: 20px;
@@ -90,14 +90,17 @@
 
     &--yellow {
       background-color: utilities.pantone("GoldenYellow");
+      color: utilities.color("primary");
     }
 
     &--teal {
       background-color: utilities.pantone("TiffanyBlue");
+      color: utilities.color("primary");
     }
 
     &--pink {
       background-color: utilities.pantone("RosePink");
+      color: utilities.color("primary");
     }
   }
 
