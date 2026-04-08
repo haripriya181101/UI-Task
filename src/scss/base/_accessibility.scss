@@ -1,8 +1,10 @@
+@use "../variables/utilities" as utilities;
+
 .skip-link {
   position: absolute;
   top: -100px;
   left: 0;
-  background: #00373e; // primary color
+  background: utilities.color("primary");
   color: #ffffff;
   padding: 1rem;
   z-index: 9999;
@@ -27,13 +29,13 @@
 
 // Global focus styles
 :focus-visible {
-  outline: 3px solid #efc01d !important; // GoldenYellow for high visibility
+  outline: 3px solid utilities.pantone("GoldenYellow") !important;
   outline-offset: 4px !important;
 }
 
 // Except for things that already have specific focus styles that are accessible
 button:focus-visible,
 a:focus-visible {
-  outline: 3px solid #efc01d !important;
+  outline: 3px solid utilities.pantone("GoldenYellow") !important;
   outline-offset: 4px !important;
 }

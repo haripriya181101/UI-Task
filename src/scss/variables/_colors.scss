@@ -12,18 +12,21 @@
 */
 
 $pantone: (
-  White: #ffffff,
-  DeepTeal: #00373e,
-  GoldenYellow: #efc01d,
-  TiffanyBlue: #4ccbbb,
-  RosePink: #f39cac,
-  Ivory: #fdf7f1,
-  SilverGrey: #b8b8b8,
-  softPeach: #f9e6d0,
-  Alabaster: #f7f6f4,
-  Black: #000000,
-  Gainsboro: #dcdcdc,
-  DarkGreenCyan: #008b8b,
+  white: #ffffff,
+  deepteal: #00373e,
+  goldenyellow: #efc01d,
+  tiffanyblue: #4ccbbb,
+  rosepink: #f39cac,
+  ivory: #fdf7f1,
+  silvergrey: #b8b8b8,
+  softpeach: #f9e6d0,
+  alabaster: #f7f6f4,
+  black: #000000,
+  gainsboro: #dcdcdc,
+  darkgreencyan: #008b8b,
+  lightyellow: #FEF9D9,
+  lightteal: #D6EFEC,
+  lightpink: #F8D8E0,
 );
 /*=====================================
 =            Colors           		 =
@@ -36,15 +39,15 @@ $pantone: (
 	This colors can be included in scss files althought we can create intermediate colors referencing this ones if we need so.
 */
 $color: (
-  primary: map.get($pantone, DeepTeal),
+  primary: map.get($pantone, deepteal),
 );
 
 $background: (
-  primary: map.get($pantone, softPeach),
+  primary: map.get($pantone, softpeach),
 );
 
 $border: (
-  primary: map.get($pantone, Gainsboro),
-  secondary: map.get($pantone, Black),
-  tertiary: map.get($pantone, DarkGreenCyan),
+  primary: map.get($pantone, gainsboro),
+  secondary: map.get($pantone, black),
+  tertiary: map.get($pantone, darkgreencyan),
 );

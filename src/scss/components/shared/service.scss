@@ -49,7 +49,7 @@
   }
 }
 .service-card {
-  background: utilities.pantone("softPeach");
+  background: utilities.pantone("softpeach");
   border-radius: 60px;
   padding: 59px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
@@ -62,7 +62,8 @@
   }
 
   &__right-card {
-    background-color: transparent;
+    background: #ffffff !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   }
 
   &:hover {
@@ -112,7 +113,7 @@
     transition: background-color 0.3s ease, transform 0.3s ease;
 
     &:hover {
-      background-color: utilities.pantone("TiffanyBlue");
+      background-color: utilities.pantone("tiffanyblue");
       transform: translateY(-2px);
     }
   }
@@ -221,13 +222,13 @@
     border-radius: 50px;
     background-color: utilities.color("primary");
     font-size: utilities.font-size("font-size-20");
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     font-weight: utilities.font-weight("semiBold");
     transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
 
     &:hover {
-      background-color: utilities.pantone("TiffanyBlue");
+      background-color: utilities.pantone("tiffanyblue");
       color: utilities.color("primary");
       transform: translateY(-2px);
     }

@@ -66,7 +66,7 @@
 
       &.is-active {
         background-color: utilities.color("primary");
-        color: #fff;
+        color: #ffffff;
       }
     }
   }
@@ -82,7 +82,7 @@
     transition: all 0.3s ease;
 
     &:hover {
-      background-color: utilities.pantone("TiffanyBlue");
+      background-color: utilities.pantone("tiffanyblue");
       transform: translateY(-2px);
     }
   }
@@ -134,7 +134,7 @@
   display: flex !important;
   flex-direction: column !important;
   justify-content: space-between;
-  background: utilities.pantone("softPeach");
+  background: utilities.pantone("softpeach");
   &:hover {
     transform: translateY(-6px);
   }
@@ -142,7 +142,7 @@
     background-color: utilities.color("primary");
     .testimonial-card__text,
     .testimonial-card__author {
-      color: #fff;
+      color: #ffffff;
     }
   }
   &__text {
@@ -178,7 +178,7 @@
   margin-top: 100px;
   align-items: center;
   padding: 53px;
-  background-color: white;
+  background-color: #ffffff;
   border-radius: 64px;
   gap: 64px;
   &__text {

@@ -85,29 +85,29 @@ $font-size: (
     rem-calc(20),
 );
 @function font-family($name) {
-  @return map-get($font-family, $name);
+  @return map.get($font-family, $name);
 }
 
 @function font-size($key) {
-  @return map-get($font-size, $key);
+  @return map.get($font-size, $key);
 }
 
 @function font-weight($name) {
-  @return map-get($font-weight, $name);
+  @return map.get($font-weight, $name);
 }
 @function pantone($name) {
-  @return map-get($pantone, $name);
+  @return map.get($pantone, $name);
 }
 @function color($name) {
-  @return map-get($color, $name);
+  @return map.get($color, $name);
 }
 
 @function background($key) {
-  @return map-get($background, $key);
+  @return map.get($background, $key);
 }
 
 @function border($name) {
-  @return map-get($border, $name);
+  @return map.get($border, $name);
 }
 
 // ----

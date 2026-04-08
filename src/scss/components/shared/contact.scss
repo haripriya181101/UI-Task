@@ -45,6 +45,7 @@
     padding: 70px;
     display: flex;
     gap: 80px;
+    align-items: flex-start;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
 
     @media (max-width: 1024px) {
@@ -108,7 +109,7 @@
 
       &:hover {
         transform: translateY(-3px);
-        color: utilities.pantone("TiffanyBlue");
+        color: utilities.pantone("tiffanyblue");
       }
     }
   }
@@ -133,7 +134,7 @@
   }
 
   &__form-wrapper {
-    background-color: #fdf7f1;
+    background-color: #FDF7F1;
     border-radius: 40px;
     padding: 50px;
 
@@ -202,7 +203,7 @@
     transition: all 0.3s ease;
 
     &:hover {
-      background-color: utilities.pantone("TiffanyBlue");
+      background-color: utilities.pantone("tiffanyblue");
       color: utilities.color("primary");
       transform: translateY(-2px);
       box-shadow: 0 4px 15px rgba(0, 55, 62, 0.2);

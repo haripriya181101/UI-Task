@@ -5,7 +5,7 @@
   margin-bottom: 100px;
 
   &__wrapper {
-    background:#fff;
+    background: #ffffff;
     border-radius: 60px;
     padding: 80px;
     display: flex;
@@ -88,19 +88,19 @@
     display: inline-block;
     padding: 18px 42px;
     background-color: utilities.color("primary");
-    color: #fff;
+    color: #ffffff;
     border-radius: 100px;
     text-decoration: none;
     font-weight: utilities.font-weight("semiBold");
     font-size: utilities.font-size("font-size-20");
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 55, 62, 0.2);
+    box-shadow: 0 4px 15px rgba(utilities.color("primary"), 0.2);
 
     &:hover {
       transform: translateY(-3px);
-      background-color: utilities.pantone("TiffanyBlue");
+      background-color: utilities.pantone("tiffanyblue");
       color: utilities.color("primary");
-      box-shadow: 0 8px 25px rgba(0, 55, 62, 0.3);
+      box-shadow: 0 8px 25px rgba(utilities.color("primary"), 0.3);
     }
 
     @media (max-width: 768px) {

@@ -29,6 +29,13 @@
   }
 }
 
+body, button, input, textarea, select, a, h1, h2, h3, h4, h5, h6 {
+  font-family: utilities.font-family("primary"), sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 body {
   background-color: utilities.pantone("Alabaster");
+  color: utilities.color("primary");
 }

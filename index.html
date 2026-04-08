@@ -8,6 +8,7 @@
   </head>
 
   <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <header class="generic-container header" id="header">
       <button
         class="icon-hamburger"
@@ -358,29 +359,29 @@
       </div>
 
       <div class="explore__cards">
-        <div class="explore__card">
+        <div class="explore__card explore__card--yellow">
           <h3 class="explore__card-title">Articles & Guides</h3>
           <p class="explore__card-content">
             Practical tips on stress management, mindfulness, and emotional
             resilience.
           </p>
-          <a href="#" class="explore__btn explore__btn--yellow">Explore</a>
+          <a href="#" class="explore__btn">Explore</a>
         </div>
 
-        <div class="explore__card">
+        <div class="explore__card explore__card--teal">
           <h3 class="explore__card-title">Meditation & Relaxation</h3>
           <p class="explore__card-content">
             Audio sessions for guided meditation and deep breathing exercises
           </p>
-          <a href="#" class="explore__btn explore__btn--teal">Explore</a>
+          <a href="#" class="explore__btn">Explore</a>
         </div>
 
-        <div class="explore__card">
+        <div class="explore__card explore__card--pink">
           <h3 class="explore__card-title">Webinars & Workshops</h3>
           <p class="explore__card-content">
             Live and recorded sessions with mental health professionals.
           </p>
-          <a href="#" class="explore__btn explore__btn--pink">Explore</a>
+          <a href="#" class="explore__btn">Explore</a>
         </div>
       </div>
     </section>
@@ -401,9 +402,11 @@
       </div>
     </section>
 
-    <section class="faq generic-container">
+    <main id="main-content">
+      <section class="faq generic-container">
       <div class="faq__wrapper">
         <div class="faq__content">
+          <span class="faq__tagline">Need Help?</span>
           <h2 class="faq__title">Frequently Asked Questions</h2>
           <p class="faq__text">
            Find answers to common questions about our services, therapy, and mental well-being.
@@ -423,7 +426,7 @@
               <span class="faq__question"
                 >How do I book a therapy session?</span
               >
-              <i class="fa-solid fa-plus faq__icon"></i>
+              <i class="fa-solid fa-plus faq__icon" aria-hidden="true"></i>
             </button>
             <div id="faq-1" class="faq__body">
               <div class="faq__answer">
@@ -441,7 +444,7 @@
               aria-controls="faq-2"
             >
               <span class="faq__question">Are online sessions available?</span>
-              <i class="fa-solid fa-plus faq__icon"></i>
+              <i class="fa-solid fa-plus faq__icon" aria-hidden="true"></i>
             </button>
             <div id="faq-2" class="faq__body">
               <div class="faq__answer">
@@ -461,7 +464,7 @@
               <span class="faq__question"
                 >What’s the difference between therapy and coaching?</span
               >
-              <i class="fa-solid fa-plus faq__icon"></i>
+              <i class="fa-solid fa-plus faq__icon" aria-hidden="true"></i>
             </button>
             <div id="faq-3" class="faq__body">
               <div class="faq__answer">
@@ -631,13 +634,17 @@
         </div>
 
         <div class="footer__cta-card">
-          <figure class="footer__image">
-            <img src="./src/images/footer.png" alt="Footer illustration" />
-          </figure>
           <div class="footer__cta-content">
-            <h2 class="footer__cta-title">
-              Find Support, Guidance, and Balance.
-            </h2>
+            <div class="footer__cta-top">
+              <h2 class="footer__cta-title">
+                Find <span class="highlight">Support,</span><br />
+                Guidance,<br />
+                and Balance.
+              </h2>
+              <figure class="footer__image">
+                <img src="./src/images/footer.png" alt="Footer illustration" />
+              </figure>
+            </div>
             <a href="#" class="footer__cta-btn">Find Support Now</a>
           </div>
         </div>
